@@ -90,3 +90,47 @@ $$('#my-login-screen .login-button').on('click', function () {
   // Alert username and password
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
+
+console.log(app);
+
+function getMethods(obj)
+{
+    var res = [];
+    for(var m in obj) {
+        if(typeof obj[m] == "function") {
+            res.push(m)
+        }
+    }
+    console.log(res);
+    return res;
+}
+
+getMethods(app)
+
+$$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
+  // Do something here for "about" page
+  $(document).ready(function() {
+    //localStorage.setItem('someSetting', 'off');
+    console.log("ran read.js");
+      var url = "http://iontheory.net/scoop/categories/json.php";
+      $.getJSON(url, function(result) {
+          console.log(result);
+          $.each(result, function(i, field) {
+              var id = field.ID;
+              var user = field.user;
+              var category = field.category;
+              var color = field.color;
+              $("#listcats").append("<a class='item' href='editUser.html?ID=" + id + "&user=" + user + "&category=" + category + "&color=" + color + "'><span class='item-note'>" + category + "</span><h2>" + user + " </h2><p>" + color + "</p></a>");
+          });
+      });
+  });
+})
+
+$$(document).on('page:afterout', '.page[data-name="scoops"]', function (page) {
+  // Do something here for "about" page
+  $(document).ready(function() {
+    //localStorage.setItem('someSetting', 'off');
+    console.log("ran read.js");
+    $("#listcats").empty();
+});
+});
