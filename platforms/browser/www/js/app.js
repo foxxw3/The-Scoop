@@ -120,7 +120,7 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
               var user = field.user;
               var category = field.category;
               var color = field.color;
-              $("#listcats").append("<div class='scoop " + color + "'><a href='/scoop/" + id + "/'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
+              $("#listcats").append("<div class='scoop " + color + " ' style='background-color:" + color + ";''><a href='/scoop/" + id + "/'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
           });
       });
   });

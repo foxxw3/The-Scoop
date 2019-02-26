@@ -58,7 +58,8 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 10px 10%;
-    position: relative; }
+    position: relative;
+    mix-blend-mode: difference; }
     .scoop-container .scoop a p {
       margin: 0;
       position: absolute;
@@ -100,3 +101,9 @@ p {
 .checkin-message {
   text-align: center;
   padding: 20px 10%; }
+
+  .homeScoop{
+    height: auto;
+    width: 40%;
+    margin: 30%;
+  }
