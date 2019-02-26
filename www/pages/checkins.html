@@ -1,0 +1,36 @@
+<template>
+  <div class="page" data-name="today">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">{{checkIn.title}}</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block-title">About {{checkIn.title}}</div>
+      <div class="block block-strong">
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    data: function () {
+      var checkinId = this.$route.params.id;
+      var currentCheckin;
+      this.$root.checkins.forEach(function (checkin) {
+        if (checkin.id === checkinId) {
+          currentCheckin = checkIn;
+        }
+      });
+      return {
+        checkIn: currentCheckin,
+      };
+    }
+  };
+</script>

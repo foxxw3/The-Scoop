@@ -68,7 +68,7 @@ var homeView = app.views.create('#view-home', {
 var todayView = app.views.create('#view-today', {
   url: '/today/'
 });
-var settingsView = app.views.create('#view-scoops', {
+var scoopsView = app.views.create('#view-scoops', {
   url: '/scoops/'
 });
 var settingsView = app.views.create('#view-settings', {

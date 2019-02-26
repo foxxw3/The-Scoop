@@ -8,6 +8,10 @@ routes = [
     componentUrl: './pages/today.html',
   },
   {
+    path: '/checkins/:id/',
+    componentUrl: './pages/checkins.html',
+  },
+  {
     path: '/scoops/',
     componentUrl: './pages/scoops.html',
   },
