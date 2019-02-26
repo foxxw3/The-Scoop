@@ -1,0 +1,43 @@
+h1 {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 28px;
+	color: #FEFEFE;
+	margin-top: 0;
+}
+
+h2 {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 24px;
+	color: #FEFEFE;
+	margin-top: 0;
+}
+
+p {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 18px;
+	color: #FEFEFE;
+	margin-top: 0;
+}
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+.page {
+	background-color: #F8CCCE !important;
+	z-index: 1;
+
+	.navbar {
+		background-color: #FEFEFE;
+		color: #F8CCCE;
+
+		.title {
+			text-align: center;
+			margin: 0 auto;
+			font-family: 'Montserrat Alternates', sans-serif;
+			font-size: 28px;
+		}
+
+	}
+
+}

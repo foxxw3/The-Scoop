@@ -1,0 +1,31 @@
+<template>
+  <div class="page" data-name="scoops">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="title">Scoops</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <section class="scoop-container">
+        {{#each scoops}}
+          <div class="scoop">
+            <a href="/scoop/{{id}}">
+              <img src="./assets/img/social-category-icon.svg">
+              <p>{{title}}</p>
+              <img src="./assets/img/arrow-right.svg">
+            </a>
+          </div>
+        {{/each}}
+      </section>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    data: function () {
+      return {
+        scoops: this.$root.scoops,
+      };
+    }
+  };
+</script>

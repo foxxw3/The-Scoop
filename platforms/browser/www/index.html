@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>My App</title>
+
+  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+
+    <!-- Views/Tabs container -->
+    <div class="views tabs safe-areas">
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                    <g id="Pixel-2-XL" transform="translate(-35.000000, -656.000000)" fill-rule="nonzero">
+                        <path d="M37,670 L53,670 L45,684 L37,670 Z M54.1875,664.8125 C54.7291694,665.145835 55,665.624997 55,666.25 C55,666.750003 54.8125019,667.166665 54.4375,667.5 C54.0624981,667.833335 53.6250025,668 53.125,668 L36.875,668 C36.3749975,668 35.9375019,667.822918 35.5625,667.46875 C35.1874981,667.114582 35,666.708336 35,666.25 C35,665.666664 35.2916637,665.187502 35.875,664.8125 L36,664.6875 C36.2916681,664.479166 36.4583331,664.229168 36.5,663.9375 L36.5,663.875 C36.4166662,663.624999 36.375,663.250003 36.375,662.75 C36.375,661.41666 36.8333287,660.291671 37.75,659.375 C38.6666713,658.458329 39.79166,658 41.125,658 C41.5000019,658 41.9791637,658.083332 42.5625,658.25 L42.3125,660.1875 C42.3541669,659.895832 42.4270828,659.604168 42.53125,659.3125 C42.6354172,659.020832 42.7499994,658.791668 42.875,658.625 L43,658.375 C44.2500062,656.791659 45.8541569,656 47.8125,656 C49.479175,656 50.8958275,656.583327 52.0625,657.75 C53.2291725,658.916673 53.8125,660.333325 53.8125,662 C53.8125,662.625003 53.7083344,663.249997 53.5,663.875 L53.5,663.9375 C53.5,664.187501 53.666665,664.437499 54,664.6875 L54.0625,664.75 C54.1041669,664.791667 54.1458331,664.8125 54.1875,664.8125 Z" id=""></path>
+                    </g>
+                </g>
+            </svg>
+            <h4>Cones</h4>
+          </a>
+          <a href="#view-today" class="tab-link">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                    <g id="Pixel-2-XL" transform="translate(-121.000000, -656.000000)" fill-rule="nonzero">
+                        <path d="M139.25,665.75 C138.083327,664.583327 136.666675,664 135,664 C133.333325,664 131.916673,664.583327 130.75,665.75 C129.583327,666.916673 129,668.333325 129,670 C129,671.666675 129.583327,673.083327 130.75,674.25 C131.916673,675.416673 133.333325,676 135,676 C136.666675,676 138.083327,675.416673 139.25,674.25 C140.416673,673.083327 141,671.666675 141,670 C141,668.333325 140.416673,666.916673 139.25,665.75 Z M136.3125,656 L136.3125,660 L133.6875,660 L133.6875,656 L136.3125,656 Z M144.375,658.75 L146.25,660.625 L143.875,663 L142,661.125 L144.375,658.75 Z M125.625,658.75 L128,661.125 L126.125,663 L123.75,660.625 L125.625,658.75 Z M129.375,664.375 C130.958341,662.791659 132.833323,662 135,662 C137.166677,662 139.041659,662.791659 140.625,664.375 C142.208341,665.958341 143,667.833323 143,670 C143,672.166677 142.208341,674.041659 140.625,675.625 C139.041659,677.208341 137.166677,678 135,678 C132.833323,678 130.958341,677.208341 129.375,675.625 C127.791659,674.041659 127,672.166677 127,670 C127,667.833323 127.791659,665.958341 129.375,664.375 Z M149,668.6875 L149,671.3125 L145,671.3125 L145,668.6875 L149,668.6875 Z M125,668.6875 L125,671.3125 L121,671.3125 L121,668.6875 L125,668.6875 Z M143.875,677 L146.25,679.375 L144.375,681.25 L142,678.875 L143.875,677 Z M126.125,677 L128,678.875 L125.625,681.25 L123.75,679.375 L126.125,677 Z M136.3125,680 L136.3125,684 L133.6875,684 L133.6875,680 L136.3125,680 Z" id=""></path>
+                    </g>
+                </g>
+            </svg>
+            <h4>Today</h4>
+          </a>
+          <a href="#view-scoops" class="tab-link">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg viewBox="0 0 28 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                    <g id="Pixel-2-XL" transform="translate(-211.000000, -661.000000)" fill-rule="nonzero">
+                        <path d="M233.9375,668.5625 C235.354174,668.5625 236.552078,669.062495 237.53125,670.0625 C238.510422,671.062505 239,672.291659 239,673.75 C239,675.166674 238.500005,676.395828 237.5,677.4375 C236.499995,678.479172 235.291674,679 233.875,679 L216.625,679 C215.083326,679 213.760422,678.437506 212.65625,677.3125 C211.552078,676.187494 211,674.833341 211,673.25 C211,672.041661 211.354163,670.968755 212.0625,670.03125 C212.770837,669.093745 213.687494,668.437502 214.8125,668.0625 C214.979167,667.145829 215.406247,666.375003 216.09375,665.75 C216.781253,665.124997 217.583329,664.8125 218.5,664.8125 C219.083336,664.8125 219.624998,664.937499 220.125,665.1875 C220.750003,663.937494 221.645827,662.927087 222.8125,662.15625 C223.979173,661.385413 225.270826,661 226.6875,661 C228.68751,661 230.406243,661.718743 231.84375,663.15625 C233.281257,664.593757 234,666.31249 234,668.3125 C234,668.354167 233.989583,668.395833 233.96875,668.4375 C233.947917,668.479167 233.9375,668.520833 233.9375,668.5625 Z" id=""></path>
+                    </g>
+                </g>
+            </svg>
+            <h4>Scoops</h4>
+          </a>
+          <a href="#view-settings" class="tab-link">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                    <g id="Pixel-2-XL" transform="translate(-302.000000, -657.000000)" fill-rule="nonzero">
+                        <path d="M324.875,671.3125 L327.8125,673.4375 C328.062501,673.687501 328.104168,673.979165 327.9375,674.3125 L325.25,678.75 C325.083332,679.083335 324.833335,679.187501 324.5,679.0625 L321.125,677.75 C320.083328,678.458337 319.333336,678.895832 318.875,679.0625 L318.375,682.5 C318.291666,682.833335 318.062502,683 317.6875,683 L312.375,683 C311.999998,683 311.770834,682.833335 311.6875,682.5 L311.1875,679.0625 C310.562497,678.812499 309.812504,678.375003 308.9375,677.75 L305.5625,679.0625 C305.229165,679.229168 304.979168,679.125002 304.8125,678.75 L302.125,674.3125 C301.916666,673.937498 301.958332,673.645834 302.25,673.4375 L305.0625,671.3125 C305.0625,671.187499 305.052083,670.979168 305.03125,670.6875 C305.010417,670.395832 305,670.166668 305,670 C305,669.833332 305.010417,669.604168 305.03125,669.3125 C305.052083,669.020832 305.0625,668.812501 305.0625,668.6875 L302.1875,666.5625 C301.937499,666.312499 301.895832,666.020835 302.0625,665.6875 L304.75,661.25 C304.916668,660.916665 305.166665,660.812499 305.5,660.9375 L308.875,662.25 C309.916672,661.541663 310.666664,661.104168 311.125,660.9375 L311.625,657.5 C311.708334,657.166665 311.937498,657 312.3125,657 L317.625,657 C318.000002,657 318.229166,657.166665 318.3125,657.5 L318.75,660.9375 C319.375003,661.187501 320.124996,661.624997 321,662.25 L324.3125,660.9375 C324.645835,660.770832 324.916666,660.874998 325.125,661.25 L327.8125,665.6875 C328.020834,666.062502 327.979168,666.354166 327.6875,666.5625 L324.875,668.6875 C324.875,668.812501 324.885417,669.020832 324.90625,669.3125 C324.927083,669.604168 324.9375,669.833332 324.9375,670 C324.9375,670.625003 324.916667,671.062499 324.875,671.3125 Z M311.625,673.25 C312.541671,674.125004 313.645827,674.5625 314.9375,674.5625 C316.229173,674.5625 317.333329,674.125004 318.25,673.25 C319.166671,672.374996 319.625,671.291673 319.625,670 C319.625,668.708327 319.166671,667.625004 318.25,666.75 C317.333329,665.874996 316.229173,665.4375 314.9375,665.4375 C313.645827,665.4375 312.552088,665.874996 311.65625,666.75 C310.760412,667.625004 310.3125,668.708327 310.3125,670 C310.3125,671.291673 310.749996,672.374996 311.625,673.25 Z" id=""></path>
+                    </g>
+                </g>
+            </svg>
+            <h4>Settings</h4>
+          </a>
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+        <!-- Page, data-name contains page name which can be used in page callbacks -->
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title sliding">Daily Cones</div>
+            </div>
+          </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Today View -->
+      <div id="view-today" class="view tab">
+        <!-- Today page will be loaded here dynamically from /catalog/ route -->
+      </div>
+
+      <!-- Scoops View -->
+      <div id="view-scoops" class="view tab">
+        <!-- Scoops page will be loaded here dynamically from /settings/ route -->
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-settings" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Popup</div>
+              <div class="right">
+                <a href="#" class="link popup-close">Close</a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>Popup content goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Login</div>
+            <div class="list">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Username</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="username" placeholder="Your username">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Password</div>
+                    <div class="item-input-wrap">
+                      <input type="password" name="password" placeholder="Your password">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                </li>
+              </ul>
+              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cordova -->
+  <!--
+  <script src="cordova.js"></script>
+  -->
+
+  <!-- Framework7 library -->
+  <script src="framework7/js/framework7.bundle.min.js"></script>
+
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
