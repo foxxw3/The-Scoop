@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="scoops">
+  <div class="page" data-name="today">
     <div class="navbar">
       <div class="navbar-inner sliding">
         <div class="left">
@@ -12,14 +12,9 @@
       </div>
     </div>
     <div class="page-content">
-      <div class="scoop-content">
-        <h2>Weekly Estimate:</h2>
-        <p>30% of your time spent.</p>
-        <h2>Daily Estimate</h2>
-        <p>45% of your time spent.</p>
-        <h2>Goal Estimate</h2>
-        <p>20% of your time spent daily.</p>
-      </div>
+      <section class="checkin-message">
+        <p>I hope you enjoyed your {{scoop.title}}! Tell us about your experience!</p>
+      </section>
     </div>
   </div>
 </template>

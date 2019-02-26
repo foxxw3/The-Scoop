@@ -12,8 +12,15 @@
       </div>
     </div>
     <div class="page-content">
-      <div class="block-title">About {{checkin.title}}</div>
-      <div class="block block-strong">
+      <div class="scoops-category">
+      	{{#each scoops}}
+      		<div class="individual-scoop">
+      			<a href="/checkin-scoop/{{id}}/">
+	              <img src="./assets/img/social-category-icon.svg">
+	              <p>{{title}}</p>
+      			</a>
+      		</div>
+      	{{/each}}
       </div>
     </div>
   </div>
@@ -30,6 +37,7 @@
       });
       return {
         checkin: currentCheckin,
+        scoops: this.$root.scoops,
       };
     }
   };

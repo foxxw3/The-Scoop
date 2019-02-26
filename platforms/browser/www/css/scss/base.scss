@@ -31,6 +31,14 @@ p {
 		background-color: #FEFEFE;
 		color: #F8CCCE;
 
+		.left {
+			position: absolute;
+			left: 0;
+			top: 0;
+			fill: #F8CCCE;
+			-webkit-text-fill-color: #F8CCCE;
+		}
+
 		.title {
 			text-align: center;
 			margin: 0 auto;
