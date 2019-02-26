@@ -3,3 +3,27 @@
 	padding: 20px 10%;
     border-bottom: solid white 4px;
 }
+
+.checkins-container {
+	.checkin {
+
+		border-bottom: 2px white solid;
+
+		a {
+			display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    padding: 10px 10%;
+		    position: relative;
+
+		    p {
+	    	    margin: 0;
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translateX(-50%) translateY(-50%);
+		    }
+		}
+
+	}
+}

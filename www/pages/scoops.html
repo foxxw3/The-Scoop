@@ -6,19 +6,8 @@
       </div>
     </div>
     <div class="page-content">
-      <section class="scoop-container">
-        {{#each scoops}}
-          <div class="scoop {{flavor}}">
-            <a href="/scoop/{{id}}/">
-              <img src="./assets/img/social-category-icon.svg">
-              <p>{{title}}</p>
-              <img src="./assets/img/arrow-right.svg">
-            </a>
-          </div>
-        {{/each}}
+      <section class="scoop-container list" id="listcats">
       </section>
-      <ul class="list" id="listcats">
-      </ul>
     </div>
   </div>
 </template>

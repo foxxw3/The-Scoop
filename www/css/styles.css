@@ -42,6 +42,15 @@ p {
   padding: 20px 10%;
   border-bottom: solid white 4px; }
 
+.checkins-container .checkin {
+  border-bottom: 2px white solid; }
+  .checkins-container .checkin a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    position: relative; }
+
 .scoop-container .scoop {
   border-bottom: 2px white solid; }
   .scoop-container .scoop a {
