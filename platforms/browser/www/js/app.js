@@ -36,17 +36,20 @@ var app  = new Framework7({
         {
           id: '1',
           title: 'Morning',
-          time: '12:00PM'
+          time: '12:00PM',
+          storedScoops: []
         },
         {
           id: '2',
           title: 'Afternoon',
-          time: '12:00PM'
+          time: '12:00PM',
+          storedScoops: []
         },
         {
           id: '3',
           title: 'Night',
-          time: '12:00PM'
+          time: '12:00PM',
+          storedScoops: []
         },
       ]
     };
