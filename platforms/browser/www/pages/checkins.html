@@ -8,11 +8,11 @@
             <span class="ios-only">Back</span>
           </a>
         </div>
-        <div class="title">{{checkIn.title}}</div>
+        <div class="title">{{checkin.title}}</div>
       </div>
     </div>
     <div class="page-content">
-      <div class="block-title">About {{checkIn.title}}</div>
+      <div class="block-title">About {{checkin.title}}</div>
       <div class="block block-strong">
       </div>
     </div>
@@ -25,11 +25,11 @@
       var currentCheckin;
       this.$root.checkins.forEach(function (checkin) {
         if (checkin.id === checkinId) {
-          currentCheckin = checkIn;
+          currentCheckin = checkin;
         }
       });
       return {
-        checkIn: currentCheckin,
+        checkin: currentCheckin,
       };
     }
   };
