@@ -50,6 +50,12 @@ p {
     justify-content: space-between;
     padding: 10px 10%;
     position: relative; }
+    .checkins-container .checkin a p {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%); }
 
 .scoop-container .scoop {
   border-bottom: 2px white solid; }
@@ -58,8 +64,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 10px 10%;
-    position: relative;
-    mix-blend-mode: difference; }
+    position: relative; }
     .scoop-container .scoop a p {
       margin: 0;
       position: absolute;
@@ -84,7 +89,8 @@ p {
     width: 30%;
     margin: 0 1.5% 20px; }
     .scoops-category .individual-scoop a {
-      display: block; }
+      display: block;
+      mix-blend-mode: difference; }
       .scoops-category .individual-scoop a img {
         display: block;
         margin: 0 auto 10px; }
@@ -94,16 +100,29 @@ p {
 
 .scoop-content {
   text-align: center;
-  padding: 20px 10%; }
+  padding: 20px 10%;
+  border-bottom: #FEFEFE 2px solid; }
   .scoop-content p {
     margin-bottom: 20px; }
+
+.scoop-settings {
+  text-align: center;
+  padding: 20px 10%; }
 
 .checkin-message {
   text-align: center;
   padding: 20px 10%; }
 
-  .homeScoop{
-    height: auto;
-    width: 40%;
-    margin: 30%;
-  }
+.item-title {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  color: #FEFEFE;
+  margin-top: 0; }
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 15px 5px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 16px;
+  color: #FEFEFE;
+  border-bottom: white 1px solid; }
