@@ -12,6 +12,10 @@ routes = [
     componentUrl: './pages/checkins.html',
   },
   {
+    path: '/checkin-scoop/:id/',
+    componentUrl: './pages/checkin-scoop.html',
+  },
+  {
     path: '/scoops/',
     componentUrl: './pages/scoops.html',
   },

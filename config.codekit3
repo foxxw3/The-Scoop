@@ -116,6 +116,889 @@
 		"oAP": "/platforms/browser/cordova/version.bat",
 		"oF": 0
 		},
+	"/platforms/browser/www/assets/img/arrow-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/assets/img/arrow-right.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/assets/img/ice-cream-example.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/assets/img/ice-cream-example.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/assets/img/portfolio.sketch": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/assets/img/portfolio.sketch",
+		"oF": 0
+		},
+	"/platforms/browser/www/assets/img/social-category-icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/assets/img/social-category-icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/config.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/config.xml",
+		"oF": 0
+		},
+	"/platforms/browser/www/css/app.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/css/app-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/css/icons.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/css/icons-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/css/reset.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/css/reset-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/css/scss/base.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/platforms/browser/www/css/scss/base.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/platforms/browser/www/css/scss/checkin.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/platforms/browser/www/css/scss/checkin.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/platforms/browser/www/css/scss/scoops.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/platforms/browser/www/css/scss/scoops.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/platforms/browser/www/css/scss/styles.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/css/scss/styles.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/platforms/browser/www/css/scss/today.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/platforms/browser/www/css/scss/today.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/platforms/browser/www/css/scss/toolbar.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/platforms/browser/www/css/scss/toolbar.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/platforms/browser/www/css/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/css/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/fonts/Framework7Icons-Regular.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/fonts/Framework7Icons-Regular.eot",
+		"oF": 0
+		},
+	"/platforms/browser/www/fonts/Framework7Icons-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/fonts/Framework7Icons-Regular.ttf",
+		"oF": 0
+		},
+	"/platforms/browser/www/fonts/Framework7Icons-Regular.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/fonts/Framework7Icons-Regular.woff",
+		"oF": 0
+		},
+	"/platforms/browser/www/fonts/Framework7Icons-Regular.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/fonts/Framework7Icons-Regular.woff2",
+		"oF": 0
+		},
+	"/platforms/browser/www/fonts/MaterialIcons-Regular.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/fonts/MaterialIcons-Regular.eot",
+		"oF": 0
+		},
+	"/platforms/browser/www/fonts/MaterialIcons-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/fonts/MaterialIcons-Regular.ttf",
+		"oF": 0
+		},
+	"/platforms/browser/www/fonts/MaterialIcons-Regular.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/fonts/MaterialIcons-Regular.woff",
+		"oF": 0
+		},
+	"/platforms/browser/www/fonts/MaterialIcons-Regular.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/fonts/MaterialIcons-Regular.woff2",
+		"oF": 0
+		},
+	"/platforms/browser/www/framework7/css/framework7.bundle.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/css/framework7.bundle-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/framework7/css/framework7.bundle.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/css/framework7.bundle.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/framework7/css/framework7.bundle.rtl.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/css/framework7.bundle.rtl-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/framework7/css/framework7.bundle.rtl.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/css/framework7.bundle.rtl.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/framework7/css/framework7.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/css/framework7-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/framework7/css/framework7.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/css/framework7.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/framework7/css/framework7.rtl.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/css/framework7.rtl-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/framework7/css/framework7.rtl.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/css/framework7.rtl.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/framework7/js/framework7.bundle.d.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 2,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/js/framework7.bundle.d.js",
+		"oF": 0,
+		"rC": 0,
+		"tEC": 0
+		},
+	"/platforms/browser/www/framework7/js/framework7.bundle.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/js/framework7.bundle-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/framework7/js/framework7.bundle.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/js/framework7.bundle.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/framework7/js/framework7.bundle.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/js/framework7.bundle.min.js.map",
+		"oF": 0
+		},
+	"/platforms/browser/www/framework7/js/framework7.d.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 2,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/js/framework7.d.js",
+		"oF": 0,
+		"rC": 0,
+		"tEC": 0
+		},
+	"/platforms/browser/www/framework7/js/framework7.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/js/framework7-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/framework7/js/framework7.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/js/framework7.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/framework7/js/framework7.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/framework7/js/framework7.min.js.map",
+		"oF": 0
+		},
+	"/platforms/browser/www/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/index.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/js/app-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/js/app-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/js/app.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/js/app-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/js/jscolor.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/js/jscolor-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/js/routes-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/js/routes-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/js/routes.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/js/routes-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.ios.colors.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.ios.colors-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.ios.colors.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.ios.colors.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.ios.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.ios-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.ios.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.ios.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.ios.rtl.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.ios.rtl-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.ios.rtl.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.ios.rtl.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.material.colors.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.material.colors-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.material.colors.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.material.colors.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.material.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.material-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.material.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.material.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.material.rtl.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.material.rtl-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/css/framework7.material.rtl.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/css/framework7.material.rtl.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/platforms/browser/www/lib/framework7/img/i-f7-ios.png": {
+		"ft": 32768,
+		"iS": 7289,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-f7-ios.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/platforms/browser/www/lib/framework7/img/i-f7-material.png": {
+		"ft": 32768,
+		"iS": 8995,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-f7-material.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-calendar-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-calendar-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-calendar-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-calendar-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-comment-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-comment-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-comment-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-comment-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-email-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-email-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-email-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-email-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-gender-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-gender-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-gender-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-gender-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-name-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-name-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-name-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-name-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-password-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-password-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-password-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-password-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-settings-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-settings-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-settings-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-settings-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-tel-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-tel-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-tel-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-tel-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-toggle-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-toggle-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-toggle-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-toggle-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-url-ios.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-url-ios.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/img/i-form-url-material.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/platforms/browser/www/lib/framework7/img/i-form-url-material.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/platforms/browser/www/lib/framework7/js/framework7.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/js/framework7-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/lib/framework7/js/framework7.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/js/framework7.js.map",
+		"oF": 0
+		},
+	"/platforms/browser/www/lib/framework7/js/framework7.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/js/framework7.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/platforms/browser/www/lib/framework7/js/framework7.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/lib/framework7/js/framework7.min.js.map",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/404.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/404.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/checkin-scoop.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/checkin-scoop.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/checkins.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/checkins.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/page-loader-component.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/page-loader-component.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/page-loader-template7.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/page-loader-template7.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/request-and-load.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/request-and-load.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/scoop.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/scoop.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/scoops.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/scoops.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/settings.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/settings.html",
+		"oF": 0
+		},
+	"/platforms/browser/www/pages/today.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/platforms/browser/www/pages/today.html",
+		"oF": 0
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -143,6 +1026,23 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"/www/assets/img/ice-cream-example.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/www/assets/img/ice-cream-example.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/www/assets/img/portfolio.sketch": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/www/assets/img/portfolio.sketch",
+		"oF": 0
 		},
 	"/www/assets/img/social-category-icon.svg": {
 		"ft": 2097152,
@@ -193,6 +1093,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/www/css/scss/base.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/www/css/scss/checkin.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/www/css/scss/checkin.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/www/css/scss/forms.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/www/css/scss/forms.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -500,6 +1426,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/www/js/app-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/www/js/jscolor.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/www/js/jscolor-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -905,6 +1841,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/www/pages/404.html",
+		"oF": 0
+		},
+	"/www/pages/checkin-scoop.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/www/pages/checkin-scoop.html",
 		"oF": 0
 		},
 	"/www/pages/checkins.html": {

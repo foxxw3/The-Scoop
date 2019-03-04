@@ -25,6 +25,12 @@ p {
   .page .navbar {
     background-color: #FEFEFE;
     color: #F8CCCE; }
+    .page .navbar .left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      fill: #F8CCCE;
+      -webkit-text-fill-color: #F8CCCE; }
     .page .navbar .title {
       text-align: center;
       margin: 0 auto;
@@ -35,6 +41,21 @@ p {
   text-align: center;
   padding: 20px 10%;
   border-bottom: solid white 4px; }
+
+.checkins-container .checkin {
+  border-bottom: 2px white solid; }
+  .checkins-container .checkin a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    position: relative; }
+    .checkins-container .checkin a p {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%); }
 
 .scoop-container .scoop {
   border-bottom: 2px white solid; }
@@ -50,3 +71,58 @@ p {
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%); }
+  .scoop-container .scoop.Chocolate {
+    background-color: #8B4B47; }
+  .scoop-container .scoop.Strawberry {
+    background-color: #FF769C; }
+  .scoop-container .scoop.Vanilla {
+    background-color: #FEFEFE; }
+    .scoop-container .scoop.Vanilla img {
+      fill: #F8CCCE; }
+    .scoop-container .scoop.Vanilla a, .scoop-container .scoop.Vanilla p {
+      color: #F8CCCE; }
+
+.scoops-category {
+  padding: 75px 10%;
+  display: flex; }
+  .scoops-category .individual-scoop {
+    width: 30%;
+    margin: 0 1.5% 20px; }
+    .scoops-category .individual-scoop a {
+      display: block;
+      mix-blend-mode: difference; }
+      .scoops-category .individual-scoop a img {
+        display: block;
+        margin: 0 auto 10px; }
+      .scoops-category .individual-scoop a p {
+        font-size: 12px;
+        text-align: center; }
+
+.scoop-content {
+  text-align: center;
+  padding: 20px 10%;
+  border-bottom: #FEFEFE 2px solid; }
+  .scoop-content p {
+    margin-bottom: 20px; }
+
+.scoop-settings {
+  text-align: center;
+  padding: 20px 10%; }
+
+.checkin-message {
+  text-align: center;
+  padding: 20px 10%; }
+
+.item-title {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  color: #FEFEFE;
+  margin-top: 0; }
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 15px 5px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 16px;
+  color: #FEFEFE;
+  border-bottom: white 1px solid; }

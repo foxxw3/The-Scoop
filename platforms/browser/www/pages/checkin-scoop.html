@@ -8,28 +8,28 @@
             <span class="ios-only">Back</span>
           </a>
         </div>
-        <div class="title">{{checkin.title}}</div>
+        <div class="title">{{scoop.title}}</div>
       </div>
     </div>
     <div class="page-content">
-      <div class="scoops-category" id="listcheckins">
-      </div>
+      <section class="checkin-message">
+        <p>I hope you enjoyed your {{scoop.title}}! Tell us about your experience!</p>
+      </section>
     </div>
   </div>
 </template>
 <script>
   return {
     data: function () {
-      var checkinId = this.$route.params.id;
-      var currentCheckin;
-      this.$root.checkins.forEach(function (checkin) {
-        if (checkin.id === checkinId) {
-          currentCheckin = checkin;
+      var scoopId = this.$route.params.id;
+      var currentScoop;
+      this.$root.scoops.forEach(function (scoop) {
+        if (scoop.id === scoopId) {
+          currentScoop = scoop;
         }
       });
       return {
-        checkin: currentCheckin,
-        scoops: this.$root.scoops,
+        scoop: currentScoop,
       };
     }
   };

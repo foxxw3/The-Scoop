@@ -18,5 +18,69 @@
 			    transform: translateX(-50%) translateY(-50%);
 		    }
 		}
+
+		&.Chocolate {
+			background-color: #8B4B47;
+		}
+
+		&.Strawberry {
+			background-color: #FF769C;
+		}
+
+		&.Vanilla {
+			background-color: #FEFEFE;
+
+			img {
+				fill: #F8CCCE;
+			}
+
+			a, p {
+				color: #F8CCCE;
+			}
+		}
 	}
+}
+
+.scoops-category {
+	padding: 75px 10%;
+	display: flex;
+
+	.individual-scoop {
+		width: 30%;
+		margin: 0 1.5% 20px;
+
+		a {
+			display: block;
+			mix-blend-mode: difference;
+			img {
+				display: block;
+				margin: 0 auto 10px;
+			}
+
+			p {
+				font-size: 12px;
+				text-align: center;
+			}
+
+		}
+
+	}
+
+}
+
+.scoop-content {
+	text-align: center;
+	padding: 20px 10%;
+	border-bottom: #FEFEFE 2px solid;
+
+	p {
+		margin-bottom: 20px;
+	}
+
+}
+
+.scoop-settings {
+	text-align: center;
+	padding: 20px 10%;
+
 }

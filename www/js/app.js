@@ -120,11 +120,38 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
               var user = field.user;
               var category = field.category;
               var color = field.color;
-              $("#listcats").append("<a class='item' href='/scoop/" + id + "/?ID=" + id + "&user=" + user + "&category=" + category + "&color=" + color + "'><span class='item-note'>" + category + "</span><h2>" + user + " </h2><p>" + color + "</p></a>");
+              $("#listcats").append("<div class='scoop " + color + " ' style='background-color:" + color + ";''><a href='/scoop/" + id + "/'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
           });
       });
   });
 })
+
+$$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
+  // Do something here for "about" page
+  $(document).ready(function() {
+    //localStorage.setItem('someSetting', 'off');
+    console.log("ran read.js");
+      var url = "http://iontheory.net/scoop/categories/json.php";
+      $.getJSON(url, function(result) {
+          console.log(result);
+          $.each(result, function(i, field) {
+              var id = field.ID;
+              var user = field.user;
+              var category = field.category;
+              var color = field.color;
+              $("#listcheckins").append("<div class='individual-scoop'><a href='/checkin-scoop/" + id + "/'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p></a></div>");
+          });
+      });
+  });
+})
+
+$$(document).on('page:afterout', '.page[data-name="today"]', function (page) {
+  // Do something here for "about" page
+  $(document).ready(function() {
+              $("#listcheckins").empty();
+
+      });
+});
 
 $$(document).on('page:afterout', '.page[data-name="scoops"]', function (page) {
   // Do something here for "about" page

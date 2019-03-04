@@ -12,8 +12,7 @@
       </div>
     </div>
     <div class="page-content">
-      <div class="block-title">About {{checkin.title}}</div>
-      <div class="block block-strong">
+      <div class="scoops-category" id="listcheckins">
       </div>
     </div>
   </div>
@@ -30,6 +29,7 @@
       });
       return {
         checkin: currentCheckin,
+        scoops: this.$root.scoops,
       };
     }
   };
