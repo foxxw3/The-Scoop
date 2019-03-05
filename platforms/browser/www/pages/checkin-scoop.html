@@ -15,6 +15,37 @@
       <section class="checkin-message">
         <p>I hope you enjoyed your {{scoop.title}}! Tell us about your experience!</p>
       </section>
+      <div class="scoop-settings">
+        <div class="item-title item-label">How Many Hours Did You Spend Doing This?</div>
+        <div class="item-input-wrap">
+          <input type="text" placeholder="1.5"/>
+        </div>
+        <div class="item-title item-label">How Did This Time Affect Your Mood?</div>
+        <div class="item-input-wrap">
+          <div class="range-slider range-slider-init" data-label="true">
+            <input type="range" value="0" min="-2" max="2" step="1">
+            <div class="slider-options">
+              <h3>Negatively</h3>
+              <h3>Didn't Affect Mood</h3>
+              <h3>Positively</h3>
+            </div>
+          </div>
+        </div>
+        <div class="item-title item-label">How Much More Time Will You Spend on This Today?</div>
+        <div class="item-input-wrap">
+          <div class="range-slider range-slider-init" data-label="true">
+            <input type="range" value="3" min="1" max="5" step="1">
+            <div class="slider-options">
+              <h3>None</h3>
+              <h3>At Least 3 Hours</h3>
+              <h3>5 Or More Hours</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scoop-continue">
+        <a href="">Continue</a>
+      </div>
     </div>
   </div>
 </template>

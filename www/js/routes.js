@@ -24,6 +24,10 @@ routes = [
     componentUrl: './pages/scoop.html',
   },
   {
+    path: '/add-scoop/',
+    componentUrl: './pages/add-scoop.html',
+  },
+  {
     path: '/settings/',
     url: './pages/settings.html',
   },

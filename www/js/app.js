@@ -231,3 +231,11 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
         });
       });
 });
+
+$(document).ready(function(){
+  $('.cone-slider').slick({
+    arrows: true,
+    infinite: false,
+    rtl: true
+  });
+});
