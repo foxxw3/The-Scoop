@@ -144,7 +144,7 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
           var username = $("#username").val();
           var category = $("#category").val();
           var color = $("#color").val();
-          var dataString = "id=" + id + "&username=" + username + "&category=" + category + "&color=" + color + "&update=";
+          var dataString = "id=" + id + "&user=" + username + "&category=" + category + "&color=" + color + "&update=";
           $.ajax({
               type: "POST",
               url: "http://iontheory.net/scoop/categories/update.php",
