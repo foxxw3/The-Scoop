@@ -187,6 +187,38 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
               }
           });
       });
+      $("#insert").click(function() {
+            var username = $("#username").val();
+            var category = $("#category").val();
+            var color = $("#color").val();
+            var dataString = "user=" + username + "&category=" + category + "&color=" + color +"&insert=";
+            console.log('running insert');
+            console.log(username);
+            console.log(category);
+            console.log(color);
+            console.log(dataString);
+            if ($.trim(username).length > 0 & $.trim(category).length > 0 & $.trim(color).length > 0) {
+                $.ajax({
+                    type: "POST",
+                    url: "http://iontheory.net/scoop/categories/insert.php",
+                    data: dataString,
+                    crossDomain: true,
+                    cache: false,
+                    beforeSend: function() {
+                        $("#insert").val('Connecting...');
+                    },
+                    success: function(data) {
+                        if (data == "success") {
+                            alert("inserted");
+                            $("#insert").val('submit');
+                        } else if (data == "error") {
+                            alert("error");
+                        }
+                    }
+                });
+            }
+            return false;
+        });
   });
 })
 
