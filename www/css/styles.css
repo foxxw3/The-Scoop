@@ -119,7 +119,7 @@ p {
   color: #FEFEFE;
   margin-top: 0; }
 
-input[type="text"] {
+.item-input-wrap input[type="text"] {
   width: 100%;
   padding: 10px 15px 5px;
   font-family: 'Montserrat Alternates', sans-serif;
