@@ -113,7 +113,10 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
     //localStorage.setItem('someSetting', 'off');
     console.log("ran read.js");
       var url = "http://iontheory.net/scoop/categories/json.php";
+      var addButton = "<div class=\"scoop add-new\">" + "<a href=\"/add-scoop/\">" + "<img src=\"./assets/img/add-icon.svg\">" + "<p>Add New</p>" + "<img src=\"./assets/img/arrow-right.svg\">" + "</a>" + "</div>";
+      console.log(addButton);
       $.getJSON(url, function(result) {
+          $("#listcats").append(addButton);
           console.log(result);
           $.each(result, function(i, field) {
               var id = field.ID;
@@ -253,7 +256,6 @@ $$(document).on('page:afterout', '.page[data-name="scoops"]', function (page) {
   // Do something here for "about" page
   $(document).ready(function() {
     //localStorage.setItem('someSetting', 'off');
-    console.log("ran read.js");
     $("#listcats").empty();
   });
 });
