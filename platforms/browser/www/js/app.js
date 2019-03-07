@@ -51,6 +51,34 @@ var app  = new Framework7({
           time: '12:00PM',
           storedScoops: []
         },
+      ],
+      cones: [
+        {
+          id: '1',
+          date: 'today',
+          build: [
+            {
+              id: '1',
+              level: 'scoop',
+              color: '#FEFEFE'
+            },
+            {
+              id: '2',
+              level: 'scoop',
+              color: '#000000'
+            },
+            {
+              id: '3',
+              level: 'scoop',
+              color: '#333333'
+            },
+            {
+              id: '4',
+              level: 'sprinkles',
+              color: '#FEFEFE'
+            },
+          ]
+        }
       ]
     };
   },
@@ -76,6 +104,12 @@ var scoopsView = app.views.create('#view-scoops', {
 });
 var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
+});
+var loginView = app.views.create('#view-login', {
+  url: '/login/'
+});
+var signUpView = app.views.create('#view-sign-up', {
+  url: '/sign-up/'
 });
 
 
@@ -106,6 +140,22 @@ function getMethods(obj)
 }
 
 getMethods(app)
+// localStorage.setItem('username','temp');
+localStorage.setItem('username','');
+$$(document).on('page:init', function (page){
+console.log('ran after in of home');
+  if (!localStorage.getItem('username')){
+    console.log('running localStorage if ' + localStorage.getItem('username'))
+    console.log(app.router);
+    app.views.main.router.navigate('/login/');
+  }
+  if (localStorage.getItem('username') == "temp"){
+    console.log('running localStorage if ' + localStorage.getItem('username'))
+    console.log(app);
+    app.views.main.router.navigate('/sign-up/');
+
+  }
+})
 
 $$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
   //console.log('settings page query: ' + page.detial.route);
@@ -391,7 +441,11 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
   });
 })
 
-
+$$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
+  $(document).ready(function() {
+    
+  });
+})
 
 $$(document).on('page:afterout', '.page[data-name="today"]', function (page) {
   // Do something here for "about" page
@@ -417,6 +471,12 @@ $(document).ready(function(){
     infinite: false,
     rtl: true
   });
+
+  if (!localStorage.getItem('username')){
+    $('.toolbar').hide();
+  } else {
+    $('.toolbar').show();
+  }
 
   localStorage.setItem('username', 'bpittman');
 
