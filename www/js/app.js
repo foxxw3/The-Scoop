@@ -107,6 +107,58 @@ function getMethods(obj)
 
 getMethods(app)
 
+$$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
+  //console.log('settings page query: ' + page.detial.route);
+  console.log('ran settings');
+    $(document).ready(function() {
+        $("#createUser").click(function() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var fname = $("#fname").val();
+            var lname = $("#lname").val();
+            var dataString = "username=" + username + "&password=" + password + "&fname=" + fname + "&lname=" + lname + "&insert=";
+            if ($.trim(username).length > 0 & $.trim(password).length > 0 & $.trim(fname).length > 0 & $.trim(lname).length > 0) {
+                $.ajax({
+                    type: "POST",
+                    url: "http://iontheory.net/scoop/users/insert.php",
+                    data: dataString,
+                    crossDomain: true,
+                    cache: false,
+                    beforeSend: function() {
+                        $("#insert").val('Connecting...');
+                    },
+                    success: function(data) {
+                        if (data == "success") {
+                            alert("inserted");
+                            $("#insert").val('submit');
+                        } else if (data == "error") {
+                            alert("error");
+                        }
+                    }
+                });
+            }
+            return false;
+        });
+        var url = "http://iontheory.net/scoop/categories/getUser.php"
+        $("#username").val(localStorage.getItem('username'));
+        $.ajax({
+            type: "GET",
+            url: "http://iontheory.net/scoop/categories/update.php/?username=" + localStorage.getItem('username'),
+            crossDomain: true,
+            cache: false,
+            success: function(data) {
+                if (data == "success") {
+                    alert("Updated");
+                    $("#update").val("Update");
+                } else if (data == "error") {
+                    alert("error");
+                }
+            }
+        });
+
+      });
+})
+
 $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
   // Do something here for "about" page
   $(document).ready(function() {
@@ -166,7 +218,6 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
                   }
               }
           });
-
       });
       $("#delete").click(function() {
           var id = $("#id").val();
@@ -225,6 +276,8 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
   });
 })
 
+
+
 $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
   // Do something here for "about" page
   $(document).ready(function() {
@@ -260,12 +313,7 @@ $$(document).on('page:afterout', '.page[data-name="scoops"]', function (page) {
   });
 });
 
-$$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
-  console.log('page query: ' + page.detial.route);
-    $(document).ready(function() {
 
-      });
-});
 
 $(document).ready(function(){
   $('.cone-slider').slick({
@@ -273,4 +321,7 @@ $(document).ready(function(){
     infinite: false,
     rtl: true
   });
+
+  localStorage.setItem('username', 'bpittman');
+
 });
