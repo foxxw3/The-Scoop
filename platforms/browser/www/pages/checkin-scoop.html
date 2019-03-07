@@ -18,7 +18,7 @@
       <div class="scoop-settings">
         <div class="item-title item-label">How Many Hours Did You Spend Doing This?</div>
         <div class="item-input-wrap">
-          <select name="hours">
+          <select name="hours" id="hours">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -48,7 +48,7 @@
         <div class="item-title item-label">How Effectively Was This Time Spent?</div>
         <div class="item-input-wrap">
           <div class="range-slider range-slider-init" data-label="true">
-            <input type="range" value="5" min="0" max="10" step="1">
+            <input type="range" value="5" min="0" max="10" step="1" id="effect">
             <div class="slider-options">
               <h3>Not Very Effectively</h3>
               <h3></h3>
@@ -57,6 +57,7 @@
           </div>
         </div
       </div>
+      <input type="hidden" value="{{scoopCategory}}" id="category">
       <button id="checkInContinue">Continue</button>
     </div>
   </div>
