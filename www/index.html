@@ -158,6 +158,14 @@
       <div id="view-settings" class="view tab">
         <!-- Settings page will be loaded here dynamically from /settings/ route -->
       </div>
+
+      <div id="view-login" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+
+      <div id="view-sign-up" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
     </div>
 
     <!-- Popup -->
@@ -185,35 +193,25 @@
     <div class="login-screen" id="my-login-screen">
       <div class="view">
         <div class="page">
-          <div class="page-content login-screen-content">
-            <div class="login-screen-title">Login</div>
-            <div class="list">
-              <ul>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-label">Username</div>
-                    <div class="item-input-wrap">
-                      <input type="text" name="username" placeholder="Your username">
-                    </div>
-                  </div>
-                </li>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title item-label">Password</div>
-                    <div class="item-input-wrap">
-                      <input type="password" name="password" placeholder="Your password">
-                    </div>
-                  </div>
-                </li>
-              </ul>
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title">Login</div>
             </div>
-            <div class="list">
-              <ul>
-                <li>
-                  <a href="#" class="item-link list-button login-button">Sign In</a>
-                </li>
-              </ul>
-              <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
+          </div>
+          <div class="page-content login-content">
+            <div class="scoop-settings">
+              <div class="item-title item-label">Username</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="Username"/>
+              </div>
+              <div class="item-title item-label">Password</div>
+              <div class="item-input-wrap">
+                <input type="password" placeholder="Password"/>
+              </div>
+              <a href="">Login</a>
+            </div>
+            <div class="scoop-continue">
+              <a href="/sign-up/" id="create-new">Create New Account</a>
             </div>
           </div>
         </div>
