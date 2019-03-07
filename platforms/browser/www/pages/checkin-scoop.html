@@ -8,44 +8,56 @@
             <span class="ios-only">Back</span>
           </a>
         </div>
-        <div class="title">{{scoop.title}}</div>
+        <div class="title">{{scoopCategory}}</div>
       </div>
     </div>
     <div class="page-content">
       <section class="checkin-message">
-        <p>I hope you enjoyed your {{scoop.title}}! Tell us about your experience!</p>
+        <p>I hope you enjoyed your {{scoopCategory}}! Tell us about your experience!</p>
       </section>
       <div class="scoop-settings">
         <div class="item-title item-label">How Many Hours Did You Spend Doing This?</div>
         <div class="item-input-wrap">
-          <input type="text" placeholder="1.5"/>
+          <select name="hours">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+          </select>
         </div>
-        <div class="item-title item-label">How Did This Time Affect Your Mood?</div>
+        <div class="item-title item-label">How Effectively Was This Time Spent?</div>
         <div class="item-input-wrap">
           <div class="range-slider range-slider-init" data-label="true">
-            <input type="range" value="0" min="-2" max="2" step="1">
+            <input type="range" value="5" min="0" max="10" step="1">
             <div class="slider-options">
-              <h3>Negatively</h3>
-              <h3>Didn't Affect Mood</h3>
-              <h3>Positively</h3>
+              <h3>Not Very Effectively</h3>
+              <h3></h3>
+              <h3>Very Effectively</h3>
             </div>
           </div>
-        </div>
-        <div class="item-title item-label">How Much More Time Will You Spend on This Today?</div>
-        <div class="item-input-wrap">
-          <div class="range-slider range-slider-init" data-label="true">
-            <input type="range" value="3" min="1" max="5" step="1">
-            <div class="slider-options">
-              <h3>None</h3>
-              <h3>At Least 3 Hours</h3>
-              <h3>5 Or More Hours</h3>
-            </div>
-          </div>
-        </div>
+        </div
       </div>
-      <div class="scoop-continue">
-        <a href="">Continue</a>
-      </div>
+      <button id="checkInContinue">Continue</button>
     </div>
   </div>
 </template>
@@ -54,13 +66,16 @@
     data: function () {
       var scoopId = this.$route.params.id;
       var currentScoop;
-      this.$root.scoops.forEach(function (scoop) {
-        if (scoop.id === scoopId) {
-          currentScoop = scoop;
-        }
-      });
+      console.log(this.$route)
+      var scoopId = this.$route.query.id;
+      var scoopUser = this.$route.query.user;
+      var scoopCategory = this.$route.query.category;
+      var scoopColor = this.$route.query.color;
       return {
-        scoop: currentScoop,
+        scoopId: scoopId,
+        scoopUser: scoopUser,
+        scoopCategory: scoopCategory,
+        scoopColor: scoopColor,
       };
     }
   };

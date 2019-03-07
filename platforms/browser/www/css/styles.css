@@ -57,6 +57,28 @@ p {
       left: 50%;
       transform: translateX(-50%) translateY(-50%); }
 
+  .scoop-settings select{
+    width: 17%;
+    /* outline: 1px; */
+    -webkit-appearance: menulist;
+    moz-appearance: menulist;
+    background: white;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
+    font-size: 18px;
+  }
+
+  #checkInContinue{
+    width: 30%;
+    background-color: transparent;
+    border: rgba(0, 0, 0, 0.29) 2px solid;
+    border-radius: 20px;
+    padding: 8px;
+    margin-top: 15%;
+  }
+
 .scoop-container .scoop {
   border-bottom: 2px white solid; }
   .scoop-container .scoop a {

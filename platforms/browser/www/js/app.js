@@ -188,7 +188,28 @@ $$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
                 }
             });
         });
-
+        $("#deleteUser").click(function() {
+            var username = $("#username").val();
+            var dataString = "username=" + username + "&delete=";
+            $.ajax({
+                type: "GET",
+                url: "http://iontheory.net/scoop/users/delete.php",
+                data: dataString,
+                crossDomain: true,
+                cache: false,
+                beforeSend: function() {
+                    $("#delete").val('Connecting...');
+                },
+                success: function(data) {
+                    if (data == "success") {
+                        alert("Deleted");
+                        $("#deleteUser").val("Delete");
+                    } else if (data == "error") {
+                        alert("error");
+                    }
+                }
+            });
+        });
       });
 })
 
@@ -312,10 +333,8 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
 
 
 $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
-  // Do something here for "about" page
   $(document).ready(function() {
-    //localStorage.setItem('someSetting', 'off');
-    console.log("ran read.js");
+    console.log("running today");
       var url = "http://iontheory.net/scoop/categories/json.php";
       $.getJSON(url, function(result) {
           console.log(result);
@@ -324,7 +343,11 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
               var user = field.user;
               var category = field.category;
               var color = field.color;
-              $("#listcheckins").append("<div class='individual-scoop'><a href='/checkin-scoop/" + id + "/</p></a></div>");
+              var Parsedcolor = color.replace("#","%23")
+              var getVars = '?id=' + id + '&user=' + user + '&category=' + category + '&color=' + Parsedcolor;
+              var checkinsText = '<div class=\'individual-scoop\'><a href=\'/checkin-scoop/' + id + '/' + getVars + '\'><img src="./assets/img/social-category-icon.svg"><p>' + category + '</p></a></div>';
+              console.log(checkinsText)
+              $("#listcheckins").append(checkinsText);
           });
       });
   });
@@ -333,7 +356,7 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
 $$(document).on('page:afterout', '.page[data-name="today"]', function (page) {
   // Do something here for "about" page
   $(document).ready(function() {
-              $("#listcheckins").empty();
+          $("#listcheckins").empty();
 
       });
 });
