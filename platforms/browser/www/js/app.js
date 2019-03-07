@@ -51,34 +51,6 @@ var app  = new Framework7({
           time: '12:00PM',
           storedScoops: []
         },
-      ],
-      cones: [
-        {
-          id: '1',
-          date: 'today',
-          build: [
-            {
-              id: '1',
-              level: 'scoop',
-              color: '#FEFEFE'
-            },
-            {
-              id: '2',
-              level: 'scoop',
-              color: '#000000'
-            },
-            {
-              id: '3',
-              level: 'scoop',
-              color: '#333333'
-            },
-            {
-              id: '4',
-              level: 'sprinkles',
-              color: '#FEFEFE'
-            },
-          ]
-        }
       ]
     };
   },
@@ -539,5 +511,17 @@ $(document).ready(function(){
   } else {
     $('.toolbar').show();
   }
+
+  var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
+  var arrayLength = scoops.length;
+  var scoopPosition = 0;
+  var zSpace = 0;
+
+    for (var i = 0; i< arrayLength; i++) {
+      var scoopPosition = (i * 40) - 40;
+      zSpace = 499 - i;
+      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px;'></div>";
+      $("#scoops-stack").append(scoop);
+    }
 
 });
