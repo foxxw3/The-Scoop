@@ -140,7 +140,7 @@ function getMethods(obj)
 }
 
 getMethods(app)
-//localStorage.setItem("username","");
+//localStorage.setItem('username','')
 $$(document).on('page:init', function (page){
 console.log('ran after in of home');
   if (!localStorage.getItem('username')){
@@ -471,6 +471,35 @@ $$(document).on('page:afterin', '.page[data-name="sign-up"]', function (page) {
                     }
                 });
             }
+            return false;
+        });
+  });
+})
+
+$$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
+  $(document).ready(function() {
+    console.log("running login");
+      $("#loginButton").click(function() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var dataString = "username=" + username + "&password=" + password;
+            console.log('running insert');
+            console.log(username);
+            console.log(password);
+            console.log(dataString);
+            var url = "http://iontheory.net/scoop/users/auth.php?username=" + username + "&password=" + password;
+            $.getJSON(url, function(result) {
+                console.log(result);
+                console.log(result.length);
+                if (result.length != 0) {
+                    alert("Authenticated");
+                    localStorage.setItem('username',username);
+                    app.views.main.router.navigate("/");
+                    $('.toolbar').show();
+                } else{
+                    alert("error");
+                }
+            });
             return false;
         });
   });
