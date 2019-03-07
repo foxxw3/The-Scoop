@@ -108,7 +108,6 @@ function getMethods(obj)
 getMethods(app)
 
 $$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
-  //console.log('settings page query: ' + page.detial.route);
   console.log('ran settings');
     $(document).ready(function() {
         $("#createUser").click(function() {
@@ -214,9 +213,7 @@ $$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
 })
 
 $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
-  // Do something here for "about" page
   $(document).ready(function() {
-    //localStorage.setItem('someSetting', 'off');
     console.log("ran read.js");
       var url = "http://iontheory.net/scoop/categories/json.php";
       var addButton = "<div class=\"scoop add-new\">" + "<a href=\"/add-scoop/\">" + "<img src=\"./assets/img/add-icon.svg\">" + "<p>Add New</p>" + "<img src=\"./assets/img/arrow-right.svg\">" + "</a>" + "</div>";
@@ -402,9 +399,7 @@ $$(document).on('page:afterout', '.page[data-name="today"]', function (page) {
 });
 
 $$(document).on('page:afterout', '.page[data-name="scoops"]', function (page) {
-  // Do something here for "about" page
   $(document).ready(function() {
-    //localStorage.setItem('someSetting', 'off');
     $("#listcats").empty();
   });
 });
@@ -419,5 +414,6 @@ $(document).ready(function(){
   });
 
   localStorage.setItem('username', 'bpittman');
+  //localStorage.setItem('username', '');
 
 });
