@@ -139,21 +139,54 @@ $$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
             }
             return false;
         });
-        var url = "http://iontheory.net/scoop/categories/getUser.php"
+        var url = "http://iontheory.net/scoop/users/getUser.php?username=" + localStorage.getItem('username');
+        var user = "";
+        var password = "";
+        var fname = "";
+        var lname = "";
+        console.log("settings url: " + url);
         $("#username").val(localStorage.getItem('username'));
-        $.ajax({
-            type: "GET",
-            url: "http://iontheory.net/scoop/categories/update.php/?username=" + localStorage.getItem('username'),
-            crossDomain: true,
-            cache: false,
-            success: function(data) {
-                if (data == "success") {
-                    alert("Updated");
-                    $("#update").val("Update");
-                } else if (data == "error") {
-                    alert("error");
+        $.getJSON(url, function(result) {
+            console.log(result);
+            $.each(result, function(i, field) {
+                user = field.username;
+                password = field.password;
+                fname = field.fname;
+                lname = field.lname;
+                console.log('settings ' + user);
+                console.log('settings ' + password);
+                console.log('settings ' + fname);
+                console.log('settings ' + lname);
+            });
+            $("#username").val(user);
+            $("#password").val(password);
+            $("#fname").val(fname);
+            $("#lname").val(lname);
+        });
+        $("#updateUser").click(function() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var fname = $("#fname").val();
+            var lname = $("#lname").val();
+            var dataString = "id=" + id + "&username=" + username + "&password=" + password + "&fname=" + fname + "&lname=" + lname + "&update=";
+            $.ajax({
+                type: "POST",
+                url: "http://iontheory.net/scoop/users/update.php",
+                data: dataString,
+                crossDomain: true,
+                cache: false,
+                beforeSend: function() {
+                    $("#update").val('Connecting...');
+                },
+                success: function(data) {
+                    if (data == "success") {
+                        alert("Updated");
+                        $("#update").val("Update");
+                    } else if (data == "error") {
+                        alert("error");
+                    }
                 }
-            }
+            });
         });
 
       });
@@ -322,6 +355,6 @@ $(document).ready(function(){
     rtl: true
   });
 
-  localStorage.setItem('username', 'bpittman');
+  localStorage.setItem('username', 'JDoe');
 
 });
