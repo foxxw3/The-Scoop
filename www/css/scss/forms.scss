@@ -2,7 +2,7 @@
 	font-family: 'Montserrat Alternates', sans-serif;
     font-size: 20px;
     color: #FEFEFE;
-    margin-top: 0;
+    margin: 0 0 20px;
 }
 
 .item-input-wrap{
@@ -13,5 +13,27 @@
 	    font-size: 16px;
 	    color: #FEFEFE;
 	    border-bottom: white 1px solid;
+	    text-align: center;
+	}
+
+	.icon-grid {
+
+		display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+
+		button {
+			background-color: rgba(0, 0, 0, 0);
+			border: none;
+			width: 30%;
+			margin-bottom: 20px;
+
+			img {
+				width: 100%;
+				max-width: 65px;
+				margin: 0 auto;
+			}
+		}
+
 	}
 }

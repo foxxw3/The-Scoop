@@ -64,7 +64,8 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 10px 10%;
-    position: relative; }
+    position: relative;
+    mix-blend-mode: difference; }
     .scoop-container .scoop a p {
       margin: 0;
       position: absolute;
@@ -156,7 +157,7 @@ p {
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 20px;
   color: #FEFEFE;
-  margin-top: 0; }
+  margin: 0 0 20px; }
 
 .item-input-wrap input[type="text"] {
   width: 100%;
@@ -164,4 +165,19 @@ p {
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 16px;
   color: #FEFEFE;
-  border-bottom: white 1px solid; }
+  border-bottom: white 1px solid;
+  text-align: center; }
+
+.item-input-wrap .icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .item-input-wrap .icon-grid button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 30%;
+    margin-bottom: 20px; }
+    .item-input-wrap .icon-grid button img {
+      width: 100%;
+      max-width: 65px;
+      margin: 0 auto; }

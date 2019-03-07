@@ -238,4 +238,13 @@ $(document).ready(function(){
     infinite: false,
     rtl: true
   });
+
+  // $('.icon-grid button').click(function() {
+  //   if($(this).hasClass('active')) {
+  //     $(this).removeClass('active');
+  //   } else {
+  //     $('.icon-grid button').removeClass('active');
+  //     $(this).addClass('active');
+  //   }
+  // });
 });
