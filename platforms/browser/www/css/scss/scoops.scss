@@ -143,3 +143,34 @@
 		}
 	}
 }
+
+.ice-cream-builder {
+	height: 500px;
+
+	.scoops {
+		height: 350px;
+		position: relative;
+		margin-top: -180px;
+
+		.scoop-topping {
+			height: 85px;
+			width: 95px;
+			border-radius: 100%;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+
+		}
+	}
+
+	.cone {
+		z-index: 500;
+		position: relative;
+
+		img {
+			margin: 0 auto;
+			display: block;
+			max-height: 150px;
+		}
+	}
+}

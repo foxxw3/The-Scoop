@@ -51,34 +51,6 @@ var app  = new Framework7({
           time: '12:00PM',
           storedScoops: []
         },
-      ],
-      cones: [
-        {
-          id: '1',
-          date: 'today',
-          build: [
-            {
-              id: '1',
-              level: 'scoop',
-              color: '#FEFEFE'
-            },
-            {
-              id: '2',
-              level: 'scoop',
-              color: '#000000'
-            },
-            {
-              id: '3',
-              level: 'scoop',
-              color: '#333333'
-            },
-            {
-              id: '4',
-              level: 'sprinkles',
-              color: '#FEFEFE'
-            },
-          ]
-        }
       ]
     };
   },
@@ -112,7 +84,6 @@ var signUpView = app.views.create('#view-sign-up', {
   url: '/sign-up/'
 });
 
-
 // Login Screen Demo
 $$('#my-login-screen .login-button').on('click', function () {
   var username = $$('#my-login-screen [name="username"]').val();
@@ -140,20 +111,14 @@ function getMethods(obj)
 }
 
 getMethods(app)
-// localStorage.setItem('username','temp');
-localStorage.setItem('username','');
+localStorage.setItem('username','temp');
+// localStorage.setItem('username','');
 $$(document).on('page:init', function (page){
 console.log('ran after in of home');
   if (!localStorage.getItem('username')){
     console.log('running localStorage if ' + localStorage.getItem('username'))
     console.log(app.router);
     app.views.main.router.navigate('/login/');
-  }
-  if (localStorage.getItem('username') == "temp"){
-    console.log('running localStorage if ' + localStorage.getItem('username'))
-    console.log(app);
-    app.views.main.router.navigate('/sign-up/');
-
   }
 })
 
@@ -441,12 +406,6 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
   });
 })
 
-$$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
-  $(document).ready(function() {
-    
-  });
-})
-
 $$(document).on('page:afterout', '.page[data-name="today"]', function (page) {
   // Do something here for "about" page
   $(document).ready(function() {
@@ -479,5 +438,17 @@ $(document).ready(function(){
   }
 
   localStorage.setItem('username', 'bpittman');
+
+  var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
+  var arrayLength = scoops.length;
+  var scoopPosition = 0;
+  var zSpace = 0;
+
+    for (var i = 0; i< arrayLength; i++) {
+      var scoopPosition = (i * 40) - 40;
+      zSpace = 499 - i;
+      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px;'></div>";
+      $("#scoops-stack").append(scoop);
+    }
 
 });
