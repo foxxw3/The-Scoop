@@ -8,7 +8,7 @@
             <span class="ios-only">Back</span>
           </a>
         </div>
-        <div class="title">{{checkin.title}}</div>
+        <div class="title" id="checkinTitle">{{checkin.title}}</div>
       </div>
     </div>
     <div class="page-content">
@@ -20,10 +20,10 @@
 <script>
   return {
     data: function () {
-      var checkinId = this.$route.params.id;
+      var checkinId = this.$route.params.title;
       var currentCheckin;
       this.$root.checkins.forEach(function (checkin) {
-        if (checkin.id === checkinId) {
+        if (checkin.title === checkinId) {
           currentCheckin = checkin;
         }
       });

@@ -335,6 +335,8 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
 $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
   $(document).ready(function() {
     console.log("running today");
+    console.log ();
+    var checkinTitle = page.detail.route.params.title;
       var url = "http://iontheory.net/scoop/categories/json.php";
       $.getJSON(url, function(result) {
           console.log(result);
@@ -344,14 +346,52 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
               var category = field.category;
               var color = field.color;
               var Parsedcolor = color.replace("#","%23")
-              var getVars = '?id=' + id + '&user=' + user + '&category=' + category + '&color=' + Parsedcolor;
+              var getVars = '?id=' + id + '&user=' + user + '&category=' + category + '&color=' + Parsedcolor + '&checkinTitle=' + checkinTitle;
               var checkinsText = '<div class=\'individual-scoop\'><a href=\'/checkin-scoop/' + id + '/' + getVars + '\'><img src="./assets/img/social-category-icon.svg"><p>' + category + '</p></a></div>';
               console.log(checkinsText)
               $("#listcheckins").append(checkinsText);
           });
       });
+      $("#checkInContinue").click(function() {
+            var username = localStorage.getItem('username');
+            var category = $("#category").val();
+            var hours = $("#hours").val();
+            var effect = $("#effect").val();
+            var time = page.detail.route.query.checkinTitle;
+            var points = hours * effect;
+            var dataString = "user=" + username + "&category=" + category + "&points=" + points + "&time=" + time +"&insert=";
+            console.log('running insert');
+            console.log(username);
+            console.log(category);
+            console.log(points);
+            console.log(time);
+            console.log(dataString);
+            if ($.trim(username).length > 0 & $.trim(category).length > 0 & $.trim(points).length > 0 & $.trim(time).length > 0) {
+                $.ajax({
+                    type: "POST",
+                    url: "http://iontheory.net/scoop/entries/insert.php",
+                    data: dataString,
+                    crossDomain: true,
+                    cache: false,
+                    beforeSend: function() {
+                        $("#insert").val('Connecting...');
+                    },
+                    success: function(data) {
+                        if (data == "success") {
+                            alert("inserted");
+                            $("#insert").val('submit');
+                        } else if (data == "error") {
+                            alert("error");
+                        }
+                    }
+                });
+            }
+            return false;
+        });
   });
 })
+
+
 
 $$(document).on('page:afterout', '.page[data-name="today"]', function (page) {
   // Do something here for "about" page
@@ -378,6 +418,6 @@ $(document).ready(function(){
     rtl: true
   });
 
-  localStorage.setItem('username', 'JDoe');
+  localStorage.setItem('username', 'bpittman');
 
 });
