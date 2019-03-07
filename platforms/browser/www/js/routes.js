@@ -31,6 +31,18 @@ routes = [
     path: '/settings/',
     url: './pages/settings.html',
   },
+  {
+    path: '/login/',
+    url: './pages/login.html',
+  },
+  {
+    path: '/sign-up/',
+    url: './pages/sign-up.html',
+  },
+  {
+    path: '/scoop-set-up/',
+    url: './pages/scoop-set-up.html',
+  },
   // Page Loaders & Router
   {
     path: '/page-loader-template7/:user/:userId/:posts/:postId/',

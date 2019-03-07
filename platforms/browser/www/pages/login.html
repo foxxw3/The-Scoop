@@ -1,0 +1,39 @@
+<div class="page login-content" data-name="login">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="title">Login</div>
+    </div>
+  </div>
+  <div class="page-content login-content">
+    <div class="scoop-settings">
+      <div class="item-title item-label">Username</div>
+      <div class="item-input-wrap">
+        <input type="text" placeholder="Username"/>
+      </div>
+      <div class="item-title item-label">Password</div>
+      <div class="item-input-wrap">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <a href="">Login</a>
+    </div>
+    <div class="scoop-continue">
+      <a href="/sign-up/" id="create-new">Create New Account</a>
+    </div>
+  </div>
+</div>
+<script>
+  return {
+    data: function () {
+      var scoopId = this.$route.params.id;
+      var currentScoop;
+      this.$root.scoops.forEach(function (scoop) {
+        if (scoop.id === scoopId) {
+          currentScoop = scoop;
+        }
+      });
+      return {
+        scoop: currentScoop,
+      };
+    }
+  };
+</script>
