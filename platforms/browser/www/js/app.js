@@ -208,6 +208,11 @@ $$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
                 }
             });
         });
+        $("#logoutUser").click(function(){
+          localStorage.setItem("username","");
+          app.views.main.router.navigate("/login/");
+          $('.toolbar').hide();
+        });
         $("#deleteUser").click(function() {
             var username = $("#username").val();
             var dataString = "username=" + username + "&delete=";
@@ -413,8 +418,8 @@ $$(document).on('page:afterin', '.page[data-name="sign-up"]', function (page) {
   $(document).ready(function() {
     console.log("running sign up");
       $("#signupContinue").click(function() {
-            var username = $("#username").val();
-            var password = $("#password").val();
+            var username = $("#signupusername").val();
+            var password = $("#signuppassword").val();
             var fname = $("#fname").val();
             var lname = $("#lname").val();
             var dataString = "username=" + username + "&password=" + password + "&fname=" + fname + "&lname=" + lname +"&insert=";
@@ -468,6 +473,22 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
                     localStorage.setItem('username',username);
                     app.views.main.router.navigate("/");
                     $('.toolbar').show();
+                    $('.cone-slider').slick({
+                      arrows: true,
+                      infinite: false,
+                      rtl: true
+                    });
+                    var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
+                    var arrayLength = scoops.length;
+                    var scoopPosition = 0;
+                    var zSpace = 0;
+
+                      for (var i = 0; i< arrayLength; i++) {
+                        var scoopPosition = (i * 40) - 40;
+                        zSpace = 499 - i;
+                        var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px;'></div>";
+                        $("#scoops-stack").append(scoop);
+    }
                 } else{
                     alert("error");
                 }
@@ -479,8 +500,23 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
 
 $$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
   $(document).ready(function() {
-
+    $('.cone-slider').slick({
+    arrows: true,
+    infinite: false,
+    rtl: true
+    });
   });
+  var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
+  var arrayLength = scoops.length;
+  var scoopPosition = 0;
+  var zSpace = 0;
+
+    for (var i = 0; i< arrayLength; i++) {
+      var scoopPosition = (i * 40) - 40;
+      zSpace = 499 - i;
+      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px;'></div>";
+      $("#scoops-stack").append(scoop);
+    }
 })
 
 $$(document).on('page:afterout', '.page[data-name="today"]', function (page) {
