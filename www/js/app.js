@@ -140,8 +140,7 @@ function getMethods(obj)
 }
 
 getMethods(app)
-// localStorage.setItem('username','temp');
-localStorage.setItem('username','');
+//localStorage.setItem("username","");
 $$(document).on('page:init', function (page){
 console.log('ran after in of home');
   if (!localStorage.getItem('username')){
@@ -438,9 +437,48 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
   });
 })
 
+$$(document).on('page:afterin', '.page[data-name="sign-up"]', function (page) {
+  $(document).ready(function() {
+    console.log("running sign up");
+      $("#signupContinue").click(function() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var fname = $("#fname").val();
+            var lname = $("#lname").val();
+            var dataString = "username=" + username + "&password=" + password + "&fname=" + fname + "&lname=" + lname +"&insert=";
+            console.log('running insert');
+            console.log(username);
+            console.log(password);
+            console.log(fname);
+            console.log(lname);
+            console.log(dataString);
+            if ($.trim(username).length > 0 & $.trim(password).length > 0 & $.trim(fname).length > 0 & $.trim(lname).length > 0) {
+                $.ajax({
+                    type: "POST",
+                    url: "http://iontheory.net/scoop/users/insert.php",
+                    data: dataString,
+                    crossDomain: true,
+                    cache: false,
+                    success: function(data) {
+                        if (data == "success") {
+                            alert("account created");
+                            localStorage.setItem('username',username);
+                            app.views.main.router.navigate("/");
+                            $('.toolbar').show();
+                        } else if (data == "error") {
+                            alert("error");
+                        }
+                    }
+                });
+            }
+            return false;
+        });
+  });
+})
+
 $$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
   $(document).ready(function() {
-    
+
   });
 })
 
@@ -472,8 +510,5 @@ $(document).ready(function(){
   } else {
     $('.toolbar').show();
   }
-
-  localStorage.setItem('username', 'bpittman');
-  //localStorage.setItem('username', '');
 
 });
