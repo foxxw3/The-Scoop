@@ -9,11 +9,12 @@
     <div class="list no-hairlines-md">
       <ul>
         <li>
+          <input type="hidden" id="id" value="" />
           <div class="item-content item-input">
             <div class="item-inner">
-              <div class="item-title item-label">Name</div>
+              <div class="item-title item-label">First Name</div>
               <div class="item-input-wrap">
-                <input type="text" placeholder="Your name"/>
+                <input type="text" placeholder="First name" id="fname"/>
               </div>
             </div>
           </div>
@@ -21,9 +22,9 @@
         <li>
           <div class="item-content item-input">
             <div class="item-inner">
-              <div class="item-title item-label">E-mail</div>
+              <div class="item-title item-label">Last Name</div>
               <div class="item-input-wrap">
-                <input type="email" placeholder="E-mail"/>
+                <input type="text" placeholder="Last Name" id="lname"/>
               </div>
             </div>
           </div>
@@ -31,9 +32,9 @@
         <li>
           <div class="item-content item-input">
             <div class="item-inner">
-              <div class="item-title item-label">URL</div>
+              <div class="item-title item-label">Username</div>
               <div class="item-input-wrap">
-                <input type="url" placeholder="URL"/>
+                <input type="text" placeholder="Username" id="username"/>
               </div>
             </div>
           </div>
@@ -43,11 +44,17 @@
             <div class="item-inner">
               <div class="item-title item-label">Password</div>
               <div class="item-input-wrap">
-                <input type="password" placeholder="Password"/>
+                <input type="password" placeholder="Password" id="password"/>
               </div>
             </div>
           </div>
         </li>
+        <div class="item">
+            <input type="button" id="updateUser" class="button button-block" value="Update" />
+        </div>
+        <div class="item">
+            <input type="button" id="deleteUser" class="button button-block" value="Delete Account" />
+        </div>
         <li>
           <div class="item-content item-input">
             <div class="item-inner">

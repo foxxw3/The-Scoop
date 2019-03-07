@@ -77,12 +77,6 @@ var scoopsView = app.views.create('#view-scoops', {
 var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
-var loginView = app.views.create('#view-login', {
-  url: '/login/'
-});
-var signUpView = app.views.create('#view-sign-up', {
-  url: '/sign-up/'
-});
 
 
 // Login Screen Demo
@@ -112,21 +106,111 @@ function getMethods(obj)
 }
 
 getMethods(app)
-// localStorage.setItem('username','temp');
-localStorage.setItem('username','');
-$$(document).on('page:init', function (page){
-console.log('ran after in of home');
-  if (!localStorage.getItem('username')){
-    console.log('running localStorage if ' + localStorage.getItem('username'))
-    console.log(app.router);
-    app.views.main.router.navigate('/login/');
-  }
-  if (localStorage.getItem('username') == "temp"){
-    console.log('running localStorage if ' + localStorage.getItem('username'))
-    console.log(app);
-    app.views.main.router.navigate('/sign-up/');
 
-  }
+$$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
+  //console.log('settings page query: ' + page.detial.route);
+  console.log('ran settings');
+    $(document).ready(function() {
+        $("#createUser").click(function() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var fname = $("#fname").val();
+            var lname = $("#lname").val();
+            var dataString = "username=" + username + "&password=" + password + "&fname=" + fname + "&lname=" + lname + "&insert=";
+            if ($.trim(username).length > 0 & $.trim(password).length > 0 & $.trim(fname).length > 0 & $.trim(lname).length > 0) {
+                $.ajax({
+                    type: "POST",
+                    url: "http://iontheory.net/scoop/users/insert.php",
+                    data: dataString,
+                    crossDomain: true,
+                    cache: false,
+                    beforeSend: function() {
+                        $("#insert").val('Connecting...');
+                    },
+                    success: function(data) {
+                        if (data == "success") {
+                            alert("inserted");
+                            $("#insert").val('submit');
+                        } else if (data == "error") {
+                            alert("error");
+                        }
+                    }
+                });
+            }
+            return false;
+        });
+        var url = "http://iontheory.net/scoop/users/getUser.php?username=" + localStorage.getItem('username');
+        var user = "";
+        var password = "";
+        var fname = "";
+        var lname = "";
+        console.log("settings url: " + url);
+        $("#username").val(localStorage.getItem('username'));
+        $.getJSON(url, function(result) {
+            console.log(result);
+            $.each(result, function(i, field) {
+                user = field.username;
+                password = field.password;
+                fname = field.fname;
+                lname = field.lname;
+                console.log('settings ' + user);
+                console.log('settings ' + password);
+                console.log('settings ' + fname);
+                console.log('settings ' + lname);
+            });
+            $("#username").val(user);
+            $("#password").val(password);
+            $("#fname").val(fname);
+            $("#lname").val(lname);
+        });
+        $("#updateUser").click(function() {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            var fname = $("#fname").val();
+            var lname = $("#lname").val();
+            var dataString = "id=" + id + "&username=" + username + "&password=" + password + "&fname=" + fname + "&lname=" + lname + "&update=";
+            $.ajax({
+                type: "POST",
+                url: "http://iontheory.net/scoop/users/update.php",
+                data: dataString,
+                crossDomain: true,
+                cache: false,
+                beforeSend: function() {
+                    $("#update").val('Connecting...');
+                },
+                success: function(data) {
+                    if (data == "success") {
+                        alert("Updated");
+                        $("#update").val("Update");
+                    } else if (data == "error") {
+                        alert("error");
+                    }
+                }
+            });
+        });
+        $("#deleteUser").click(function() {
+            var username = $("#username").val();
+            var dataString = "username=" + username + "&delete=";
+            $.ajax({
+                type: "GET",
+                url: "http://iontheory.net/scoop/users/delete.php",
+                data: dataString,
+                crossDomain: true,
+                cache: false,
+                beforeSend: function() {
+                    $("#delete").val('Connecting...');
+                },
+                success: function(data) {
+                    if (data == "success") {
+                        alert("Deleted");
+                        $("#deleteUser").val("Delete");
+                    } else if (data == "error") {
+                        alert("error");
+                    }
+                }
+            });
+        });
+      });
 })
 
 $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
@@ -188,7 +272,6 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
                   }
               }
           });
-
       });
       $("#delete").click(function() {
           var id = $("#id").val();
@@ -247,11 +330,11 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
   });
 })
 
+
+
 $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
-  // Do something here for "about" page
   $(document).ready(function() {
-    //localStorage.setItem('someSetting', 'off');
-    console.log("ran read.js");
+    console.log("running today");
       var url = "http://iontheory.net/scoop/categories/json.php";
       $.getJSON(url, function(result) {
           console.log(result);
@@ -260,7 +343,11 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
               var user = field.user;
               var category = field.category;
               var color = field.color;
-              $("#listcheckins").append("<div class='individual-scoop'><a href='/checkin-scoop/" + id + "/</p></a></div>");
+              var Parsedcolor = color.replace("#","%23")
+              var getVars = '?id=' + id + '&user=' + user + '&category=' + category + '&color=' + Parsedcolor;
+              var checkinsText = '<div class=\'individual-scoop\'><a href=\'/checkin-scoop/' + id + '/' + getVars + '\'><img src="./assets/img/social-category-icon.svg"><p>' + category + '</p></a></div>';
+              console.log(checkinsText)
+              $("#listcheckins").append(checkinsText);
           });
       });
   });
@@ -269,7 +356,7 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
 $$(document).on('page:afterout', '.page[data-name="today"]', function (page) {
   // Do something here for "about" page
   $(document).ready(function() {
-              $("#listcheckins").empty();
+          $("#listcheckins").empty();
 
       });
 });
@@ -282,12 +369,7 @@ $$(document).on('page:afterout', '.page[data-name="scoops"]', function (page) {
   });
 });
 
-$$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
-  // console.log('page query: ' + page.detial.route);
-    $(document).ready(function() {
 
-      });
-});
 
 $(document).ready(function(){
   $('.cone-slider').slick({
@@ -296,10 +378,6 @@ $(document).ready(function(){
     rtl: true
   });
 
-  if (!localStorage.getItem('username')){
-    $('.toolbar').hide();
-  } else {
-    $('.toolbar').show();
-  }
+  localStorage.setItem('username', 'JDoe');
 
 });
