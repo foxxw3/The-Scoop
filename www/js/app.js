@@ -241,8 +241,9 @@ $$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
 $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
   $(document).ready(function() {
     console.log("ran read.js");
-      var url = "http://iontheory.net/scoop/categories/json.php";
+      var url = "http://iontheory.net/scoop/categories/json.php?user=" + localStorage.getItem("username");
       var addButton = "<div class=\"scoop add-new\">" + "<a href=\"/add-scoop/\">" + "<img src=\"./assets/img/add-icon.svg\">" + "<p>Add New</p>" + "<img src=\"./assets/img/arrow-right.svg\">" + "</a>" + "</div>";
+      console.log("scoops get url: " + url);
       console.log(addButton);
       $.getJSON(url, function(result) {
           $("#listcats").append(addButton);
