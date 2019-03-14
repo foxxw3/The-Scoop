@@ -112,7 +112,7 @@ function getMethods(obj)
 }
 
 getMethods(app)
-//localStorage.setItem('username','')
+
 $$(document).on('page:init', function (page){
 console.log('ran after in of home');
   if (!localStorage.getItem('username')){
@@ -210,7 +210,7 @@ $$(document).on('page:afterin', '.page[data-name="settings"]', function (page) {
         });
         $("#logoutUser").click(function(){
           localStorage.setItem("username","");
-          app.views.main.router.navigate("/login/");
+          console.log("Ran logout")
           $('.toolbar').hide();
         });
         $("#deleteUser").click(function() {
@@ -377,6 +377,7 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
           });
       });
       $("#checkInContinue").click(function() {
+            console.log("ran checkin continue");
             var username = localStorage.getItem('username');
             var category = $("#category").val();
             var hours = $("#hours").val();
@@ -514,7 +515,7 @@ $$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
 
     for (var i = 0; i< arrayLength; i++) {
       var scoopPosition = (i * 40) - 40;
-      zSpace = 499 - i;
+      zSpace = 0 - i;
       var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px;'></div>";
       $("#scoops-stack").append(scoop);
     }
@@ -556,8 +557,10 @@ $(document).ready(function(){
 
     for (var i = 0; i< arrayLength; i++) {
       var scoopPosition = (i * 40) - 40;
-      zSpace = 499 - i;
-      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px;'></div>";
+      zSpace = 0 - i;
+      console.log("building scoop")
+      console.log(zSpace);
+      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
       $("#scoops-stack").append(scoop);
     }
 

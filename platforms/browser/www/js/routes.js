@@ -8,7 +8,7 @@ routes = [
     componentUrl: './pages/today.html',
   },
   {
-    path: '/checkins/:title/',
+    path: '/checkins/',
     componentUrl: './pages/checkins.html',
   },
   {
