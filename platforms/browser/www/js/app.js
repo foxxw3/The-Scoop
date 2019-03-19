@@ -269,9 +269,17 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
       console.log(category);
       console.log(color);
       $("#id").val(id);
-      $("#username").val(user);
+      if(!user){
+        $("#username").val(localStorage.getItem('username'));
+      }else{
+        $("#username").val(user);
+      }
       $("#category").val(category);
-      $("#color").val(color);
+      if(!color){
+        $("#color").val("#FFF");
+      }else{
+        $("#color").val(color);
+      }
       $("#update").click(function() {
           var id = $("#id").val();
           var username = $("#username").val();
@@ -368,8 +376,9 @@ $$(document).on('page:afterin', '.page[data-name="checkingroup"]', function (pag
               var user = localStorage.getItem('username');
               var category = field.category;
               var color = field.color;
+              var time = page.detail.route.query.time;
               Parsedcolor = color.replace("#","%23")
-              $("#listcheckins").append("<div class='scoop' style='background-color:" + color + ";''><a href='/checkin-scoop/?user=" + localStorage.getItem("username") + "&category=" + category + "'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
+              $("#listcheckins").append("<div style='background-color:" + color + ";''><a href='/checkin-scoop/?user=" + localStorage.getItem("username") + "&category=" + category + "&time=" + time + "'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
           });
       });
   });
@@ -378,30 +387,14 @@ $$(document).on('page:afterin', '.page[data-name="checkingroup"]', function (pag
 $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
   $(document).ready(function() {
     console.log("running today");
-    console.log ();
-    var checkinTitle = page.detail.route.params.title;
-      var url = "http://iontheory.net/scoop/categories/json.php";
-      $.getJSON(url, function(result) {
-          console.log(result);
-          $.each(result, function(i, field) {
-              var id = field.ID;
-              var user = field.user;
-              var category = field.category;
-              var color = field.color;
-              var Parsedcolor = color.replace("#","%23")
-              var getVars = '?id=' + id + '&user=' + user + '&category=' + category + '&color=' + Parsedcolor + '&checkinTitle=' + checkinTitle;
-              var checkinsText = '<div class=\'individual-scoop\'><a href=\'/checkin-scoop/' + id + '/' + getVars + '\'><img src="./assets/img/social-category-icon.svg"><p>' + category + '</p></a></div>';
-              console.log(checkinsText)
-              $("#listcheckins").append(checkinsText);
-          });
-      });
+    console.log (page.detail.route.query);
       $("#checkInContinue").click(function() {
             console.log("ran checkin continue");
             var username = localStorage.getItem('username');
             var category = $("#category").val();
             var hours = $("#hours").val();
             var effect = $("#effect").val();
-            var time = page.detail.route.query.checkinTitle;
+            var time = page.detail.route.query.time;
             var points = hours * effect;
             var dataString = "user=" + username + "&category=" + category + "&points=" + points + "&time=" + time +"&insert=";
             console.log('running insert');
@@ -481,7 +474,7 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
             var username = $("#loginusername").val();
             var password = $("#loginpassword").val();
             var dataString = "username=" + username + "&password=" + password;
-            console.log('running authentication');
+            console.log('running authention');
             console.log(username);
             console.log(password);
             console.log(dataString);
@@ -492,6 +485,7 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
                 if (result.length != 0) {
                     alert("Authenticated");
                     localStorage.setItem('username',username);
+                    window.location = "index.html"
                     app.views.main.router.navigate("/");
                     $('.toolbar').show();
                     $('.cone-slider').slick({
@@ -499,7 +493,27 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
                       infinite: false,
                       rtl: true
                     });
-                    var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
+                } else{
+                    alert("error");
+                }
+            });
+
+            if(localStorage.getItem('username').length > 0){
+
+              var url = "http://iontheory.net/scoop/entries/json.php?username=" + username;
+              $.getJSON(url, function(result) {
+                  console.log("entries result");
+                  console.log(result);
+                  console.log(result.length);
+                  var colorArray = [];
+                  if (result.length != 0) {
+                    $.each(result, function(i, field) {
+                        var color = field.color;
+                        console.log(color)
+                        colorArray.push(color)
+                    });
+                    console.log(colorArray);
+                    var scoops = colorArray;
                     var arrayLength = scoops.length;
                     var scoopPosition = 0;
                     var zSpace = 0;
@@ -507,13 +521,14 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
                       for (var i = 0; i< arrayLength; i++) {
                         var scoopPosition = (i * 40) - 40;
                         zSpace = 499 - i;
-                        var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px;'></div>";
+                        var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
                         $("#scoops-stack").append(scoop);
-    }
-                } else{
-                    alert("error");
-                }
-            });
+                      }
+                  } else{
+                      alert("error");
+                  }
+              });
+            }
             return false;
         });
   });
@@ -527,17 +542,38 @@ $$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
     rtl: true
     });
   });
-  var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
-  var arrayLength = scoops.length;
-  var scoopPosition = 0;
-  var zSpace = 0;
 
-    for (var i = 0; i< arrayLength; i++) {
-      var scoopPosition = (i * 40) - 40;
-      zSpace = 0 - i;
-      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
-      $("#scoops-stack").append(scoop);
-    }
+
+  var url = "http://iontheory.net/scoop/entries/json.php?username=" + localStorage.getItem('username');
+  $.getJSON(url, function(result) {
+      console.log("entries result");
+      console.log(result);
+      console.log(result.length);
+      var colorArray = [];
+      if (result.length != 0) {
+        $.each(result, function(i, field) {
+            var color = field.color;
+            console.log(color)
+            colorArray.push(color)
+        });
+        console.log(colorArray);
+        var scoops = colorArray;
+        var arrayLength = scoops.length;
+        var scoopPosition = 0;
+        var zSpace = 0;
+
+          for (var i = 0; i< arrayLength; i++) {
+            var scoopPosition = (i * 40) - 40;
+            zSpace = 499 - i;
+            var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
+            $("#scoops-stack").append(scoop);
+          }
+      } else{
+          alert("error");
+      }
+  });
+
+
 })
 
 $$(document).on('page:afterout', '.page[data-name="checkingroup"]', function (page) {
@@ -569,19 +605,33 @@ $(document).ready(function(){
   } else {
     $('.toolbar').show();
   }
+  var url = "http://iontheory.net/scoop/entries/json.php?username=" + localStorage.getItem('username');
+  $.getJSON(url, function(result) {
+      console.log("entries result");
+      console.log(result);
+      console.log(result.length);
+      var colorArray = [];
+      if (result.length != 0) {
+        $.each(result, function(i, field) {
+            var color = field.color;
+            console.log(color)
+            colorArray.push(color)
+        });
+        console.log(colorArray);
+        var scoops = colorArray;
+        var arrayLength = scoops.length;
+        var scoopPosition = 0;
+        var zSpace = 0;
 
-  var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
-  var arrayLength = scoops.length;
-  var scoopPosition = 0;
-  var zSpace = 0;
-
-    for (var i = 0; i< arrayLength; i++) {
-      var scoopPosition = (i * 40) - 40;
-      zSpace = 0 - i;
-      console.log("building scoop")
-      console.log(zSpace);
-      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
-      $("#scoops-stack").append(scoop);
-    }
+          for (var i = 0; i< arrayLength; i++) {
+            var scoopPosition = (i * 40) - 40;
+            zSpace = 499 - i;
+            var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
+            $("#scoops-stack").append(scoop);
+          }
+      } else{
+          alert("error");
+      }
+  });
 
 });
