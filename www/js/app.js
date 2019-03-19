@@ -484,7 +484,27 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
                       infinite: false,
                       rtl: true
                     });
-                    var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
+                } else{
+                    alert("error");
+                }
+            });
+
+            if(localStorage.getItem('username').length > 0){
+
+              var url = "http://iontheory.net/scoop/entries/json.php?username=" + username;
+              $.getJSON(url, function(result) {
+                  console.log("entries result");
+                  console.log(result);
+                  console.log(result.length);
+                  var colorArray = [];
+                  if (result.length != 0) {
+                    $.each(result, function(i, field) {
+                        var color = field.color;
+                        console.log(color)
+                        colorArray.push(color)
+                    });
+                    console.log(colorArray);
+                    var scoops = colorArray;
                     var arrayLength = scoops.length;
                     var scoopPosition = 0;
                     var zSpace = 0;
@@ -492,13 +512,14 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
                       for (var i = 0; i< arrayLength; i++) {
                         var scoopPosition = (i * 40) - 40;
                         zSpace = 499 - i;
-                        var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px;'></div>";
+                        var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
                         $("#scoops-stack").append(scoop);
-    }
-                } else{
-                    alert("error");
-                }
-            });
+                      }
+                  } else{
+                      alert("error");
+                  }
+              });
+            }
             return false;
         });
   });
@@ -512,17 +533,34 @@ $$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
     rtl: true
     });
   });
-  var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
-  var arrayLength = scoops.length;
-  var scoopPosition = 0;
-  var zSpace = 0;
+  var url = "http://iontheory.net/scoop/entries/json.php?username=" + localStorage.getItem('username');
+  $.getJSON(url, function(result) {
+      console.log("entries result");
+      console.log(result);
+      console.log(result.length);
+      var colorArray = [];
+      if (result.length != 0) {
+        $.each(result, function(i, field) {
+            var color = field.color;
+            console.log(color)
+            colorArray.push(color)
+        });
+        console.log(colorArray);
+        var scoops = colorArray;
+        var arrayLength = scoops.length;
+        var scoopPosition = 0;
+        var zSpace = 0;
 
-    for (var i = 0; i< arrayLength; i++) {
-      var scoopPosition = (i * 40) - 40;
-      zSpace = 0 - i;
-      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
-      $("#scoops-stack").append(scoop);
-    }
+          for (var i = 0; i< arrayLength; i++) {
+            var scoopPosition = (i * 40) - 40;
+            zSpace = 499 - i;
+            var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
+            $("#scoops-stack").append(scoop);
+          }
+      } else{
+          alert("error");
+      }
+  });
 })
 
 $$(document).on('page:afterout', '.page[data-name="checkingroup"]', function (page) {
@@ -554,19 +592,33 @@ $(document).ready(function(){
   } else {
     $('.toolbar').show();
   }
+  var url = "http://iontheory.net/scoop/entries/json.php?username=" + localStorage.getItem('username');
+  $.getJSON(url, function(result) {
+      console.log("entries result");
+      console.log(result);
+      console.log(result.length);
+      var colorArray = [];
+      if (result.length != 0) {
+        $.each(result, function(i, field) {
+            var color = field.color;
+            console.log(color)
+            colorArray.push(color)
+        });
+        console.log(colorArray);
+        var scoops = colorArray;
+        var arrayLength = scoops.length;
+        var scoopPosition = 0;
+        var zSpace = 0;
 
-  var scoops = ["#FEFEFE", "#333333", "#FEFEFE", "#333333"];
-  var arrayLength = scoops.length;
-  var scoopPosition = 0;
-  var zSpace = 0;
-
-    for (var i = 0; i< arrayLength; i++) {
-      var scoopPosition = (i * 40) - 40;
-      zSpace = 0 - i;
-      console.log("building scoop")
-      console.log(zSpace);
-      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
-      $("#scoops-stack").append(scoop);
-    }
+          for (var i = 0; i< arrayLength; i++) {
+            var scoopPosition = (i * 40) - 40;
+            zSpace = 499 - i;
+            var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
+            $("#scoops-stack").append(scoop);
+          }
+      } else{
+          alert("error");
+      }
+  });
 
 });
