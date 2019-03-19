@@ -368,8 +368,9 @@ $$(document).on('page:afterin', '.page[data-name="checkingroup"]', function (pag
               var user = localStorage.getItem('username');
               var category = field.category;
               var color = field.color;
+              var time = page.detail.route.query.time;
               Parsedcolor = color.replace("#","%23")
-              $("#listcheckins").append("<div style='background-color:" + color + ";''><a href='/checkin-scoop/?user=" + localStorage.getItem("username") + "&category=" + category + "'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
+              $("#listcheckins").append("<div style='background-color:" + color + ";''><a href='/checkin-scoop/?user=" + localStorage.getItem("username") + "&category=" + category + "&time=" + time + "'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
           });
       });
   });
@@ -378,30 +379,14 @@ $$(document).on('page:afterin', '.page[data-name="checkingroup"]', function (pag
 $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
   $(document).ready(function() {
     console.log("running today");
-    console.log ();
-    var checkinTitle = page.detail.route.params.title;
-      var url = "http://iontheory.net/scoop/categories/json.php";
-      $.getJSON(url, function(result) {
-          console.log(result);
-          $.each(result, function(i, field) {
-              var id = field.ID;
-              var user = field.user;
-              var category = field.category;
-              var color = field.color;
-              var Parsedcolor = color.replace("#","%23")
-              var getVars = '?id=' + id + '&user=' + user + '&category=' + category + '&color=' + Parsedcolor + '&checkinTitle=' + checkinTitle;
-              var checkinsText = '<div class=\'individual-scoop\'><a href=\'/checkin-scoop/' + id + '/' + getVars + '\'><img src="./assets/img/social-category-icon.svg"><p>' + category + '</p></a></div>';
-              console.log(checkinsText)
-              $("#listcheckins").append(checkinsText);
-          });
-      });
+    console.log (page.detail.route.query);
       $("#checkInContinue").click(function() {
             console.log("ran checkin continue");
             var username = localStorage.getItem('username');
             var category = $("#category").val();
             var hours = $("#hours").val();
             var effect = $("#effect").val();
-            var time = page.detail.route.query.checkinTitle;
+            var time = page.detail.route.query.time;
             var points = hours * effect;
             var dataString = "user=" + username + "&category=" + category + "&points=" + points + "&time=" + time +"&insert=";
             console.log('running insert');
@@ -481,7 +466,7 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
             var username = $("#loginusername").val();
             var password = $("#loginpassword").val();
             var dataString = "username=" + username + "&password=" + password;
-            console.log('running authentication');
+            console.log('running authention');
             console.log(username);
             console.log(password);
             console.log(dataString);
