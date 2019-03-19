@@ -417,6 +417,7 @@ $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
                         if (data == "success") {
                             alert("inserted");
                             $("#insert").val('submit');
+                            window.location = "index.html"
                         } else if (data == "error") {
                             alert("error");
                         }
