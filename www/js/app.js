@@ -369,7 +369,7 @@ $$(document).on('page:afterin', '.page[data-name="checkingroup"]', function (pag
               var category = field.category;
               var color = field.color;
               Parsedcolor = color.replace("#","%23")
-              $("#listcheckins").append("<div style='background-color:" + color + ";''><a href='/checkin-scoop/?user=" + localStorage.getItem("username") + "&category=" + category + "'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
+              $("#listcheckins").append("<div class='scoop' style='background-color:" + color + ";''><a href='/checkin-scoop/?user=" + localStorage.getItem("username") + "&category=" + category + "'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
           });
       });
   });

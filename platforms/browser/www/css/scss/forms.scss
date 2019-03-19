@@ -16,6 +16,16 @@
 	    text-align: center;
 	}
 
+	select {
+		width: 100px;
+		background-color: white;
+		padding: 0 0 0 20px;
+		margin: 0 auto;
+		font-family: 'Montserrat Alternates', sans-serif;
+	    font-size: 16px;
+	    color: black;
+	}
+
 	.icon-grid {
 
 		display: flex;
@@ -36,4 +46,14 @@
 		}
 
 	}
+}
+
+button#checkInContinue {
+	padding: 10px 0;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+	font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 16px;
+    color: #F8CCCE;
 }

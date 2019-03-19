@@ -16,13 +16,21 @@
         <h2>New Scoop, Who This?</h2>
       </div>
       <div class="scoop-settings">
+        <div class="item-title item-label">Username</div>
+        <div class="item-input-wrap">
+          <input type="text" placeholder="Username" id="username"/>
+        </div>
+        <div class="item-title item-label">Category</div>
+        <div class="item-input-wrap">
+          <input type="text" placeholder="Category" id="category"/>
+        </div>
         <div class="item-title item-label">Give It A Flavor</div>
         <div class="item-input-wrap">
           <input type="text" placeholder="Vanilla"/>
         </div>
         <div class="item-title item-label">What's The Color of That Flavor?</div>
         <div class="item-input-wrap">
-          <input class="jscolor" value="FEFEFE"/>
+          <input type="text" placeholder="FEFEFE" id="color"/>
         </div>
         <div class="item-title item-label">How Important is This in Your Life?</div>
         <div class="item-input-wrap">
@@ -57,28 +65,10 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="list">
         <input type="hidden" id="id" value="" />
-        <div class="item">
-            <label>Username</label>
-            <input type="text" id="username" value="" />
-        </div>
-        <div class="item">
-            <label>Category</label>
-            <input type="text" id="category" value="" />
-        </div>
-        <div class="item">
-            <label>Color</label>
-            <input type="text" id="color" value="" />
-        </div>
-        <div class="item">
-            <input type="button" id="insert" class="button button-block" value="Insert" />
-        </div>
-    </div>
-      <div class="scoop-continue">
-        <a href="#" class="link back">Continue</a>
       </div>
+        <input type="button" id="insert" class="button button-block scoop-continue" value="Insert" />
+    </div>
     </div>
   </div>
 </template>

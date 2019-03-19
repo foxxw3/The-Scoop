@@ -21,13 +21,17 @@
         <p>20% of your time spent daily.</p>
       </div>
       <div class="scoop-settings">
-        <div class="item-title item-label">Scoop Title</div>
+        <div class="item-title item-label">Username</div>
         <div class="item-input-wrap">
-          <input type="text" placeholder="Scoop Title"/>
+          <input type="text" placeholder="Username" id="username"/>
         </div>
-        <div class="item-title item-label">Scoop Color</div>
+        <div class="item-title item-label">Category</div>
         <div class="item-input-wrap">
-          <input class="jscolor" value="FEFEFE"/>
+          <input type="text" placeholder="Category" id="category"/>
+        </div>
+        <div class="item-title item-label">Color</div>
+        <div class="item-input-wrap">
+          <input type="text" placeholder="Color" id="color"/>
         </div>
         <div class="item-title item-label">How Much Time Would You Like to Spend on This Daily?</div>
         <div class="item-input-wrap">
@@ -83,28 +87,9 @@
             </button>
           </div>
         </div>
-      </div>
-      <div class="scoop-continue">
-        <a href="#" class="link back">Continue</a>
-      </div>
-      <div class="list">
-          <input type="hidden" id="id" value="" />
-          <div class="item">
-              <label>Username</label>
-              <input type="text" id="username" value="" />
-          </div>
-          <div class="item">
-              <label>Category</label>
-              <input type="text" id="category" value="" />
-          </div>
-          <div class="item">
-              <label>color</label>
-              <input type="text" id="color" value="" />
-          </div>
-          <div class="item">
-              <input type="button" id="update" class="button button-block" value="Update" />
-              <input type="button" id="delete" class="button button-block" value="Delete" />
-          </div>
+        <input type="hidden" id="id" value="" />
+        <input type="button" id="update" class="button button-block scoop-continue" value="Update" />
+        <input type="button" id="delete" class="button button-block" value="Delete" />
       </div>
     </div>
   </div>

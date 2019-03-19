@@ -129,7 +129,8 @@ p {
   padding: 0;
   text-align: right;
   text-decoration: underline;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  color: #FEFEFE; }
   .scoop-continue a {
     color: #FEFEFE; }
 
@@ -189,6 +190,15 @@ p {
   border-bottom: white 1px solid;
   text-align: center; }
 
+.item-input-wrap select {
+  width: 100px;
+  background-color: white;
+  padding: 0 0 0 20px;
+  margin: 0 auto;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 16px;
+  color: black; }
+
 .item-input-wrap .icon-grid {
   display: flex;
   flex-wrap: wrap;
@@ -202,6 +212,15 @@ p {
       width: 100%;
       max-width: 65px;
       margin: 0 auto; }
+
+button#checkInContinue {
+  padding: 10px 0;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 16px;
+  color: #F8CCCE; }
 
 .login-content .scoop-settings {
   position: absolute;
@@ -224,11 +243,10 @@ p {
   bottom: 40px;
   transform: translateX(-50%); }
 
-  #loginButton{
-		background-color: transparent;
-		border: 1px black solid;
-		padding: 10px 20px;
-		width: fit-content;
-		border-radius: 25px;
-		font-size: 14px;
-	}
+.login-content #loginButton {
+  background-color: transparent;
+  border: 1px black solid;
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 25px;
+  font-size: 14px; }
