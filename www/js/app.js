@@ -269,9 +269,17 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
       console.log(category);
       console.log(color);
       $("#id").val(id);
-      $("#username").val(user);
+      if(!user){
+        $("#username").val(localStorage.getItem('username'));
+      }else{
+        $("#username").val(user);
+      }
       $("#category").val(category);
-      $("#color").val(color);
+      if(!color){
+        $("#color").val("#FFF");
+      }else{
+        $("#color").val(color);
+      }
       $("#update").click(function() {
           var id = $("#id").val();
           var username = $("#username").val();
@@ -477,6 +485,7 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
                 if (result.length != 0) {
                     alert("Authenticated");
                     localStorage.setItem('username',username);
+                    window.location = "index.html"
                     app.views.main.router.navigate("/");
                     $('.toolbar').show();
                     $('.cone-slider').slick({
@@ -533,6 +542,8 @@ $$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
     rtl: true
     });
   });
+
+
   var url = "http://iontheory.net/scoop/entries/json.php?username=" + localStorage.getItem('username');
   $.getJSON(url, function(result) {
       console.log("entries result");
@@ -561,6 +572,8 @@ $$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
           alert("error");
       }
   });
+
+
 })
 
 $$(document).on('page:afterout', '.page[data-name="checkingroup"]', function (page) {

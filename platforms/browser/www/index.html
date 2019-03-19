@@ -29,6 +29,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/geturi.js"></script>
+
 </head>
 <body>
   <div id="app">
@@ -70,7 +71,7 @@
       <!-- Tabbar for switching views-tabs -->
       <div class="toolbar tabbar-labels toolbar-bottom">
         <div class="toolbar-inner">
-          <a href="#view-home" class="tab-link tab-link-active">
+          <a href="#view-home" class="tab-link tab-link-active" id="homeButton">
             <?xml version="1.0" encoding="UTF-8"?>
             <svg viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
@@ -103,7 +104,7 @@
             </svg>
             <h4>Scoops</h4>
           </a>
-          <a href="#view-settings" class="tab-link">
+          <a href="#view-settings" class="tab-link" id="settingsTab">
             <?xml version="1.0" encoding="UTF-8"?>
             <svg viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
@@ -129,7 +130,7 @@
 
           <!-- Scrollable page content-->
           <div class="page-content">
-            <div class="cone-slider" dir="rtl">
+            <div class="cone-slider" dir="rtl" id="todayScoop">
               <div>
                 <div class="ice-cream-builder">
                   <div class="scoops" id="scoops-stack">
@@ -140,7 +141,7 @@
                 </div>
               </div>
               <div>
-                <img src="./assets/img/ice-cream-example.svg" class="homeScoop">
+                <img src="./assets/img/ice-cream-example.svg" class="homeScoop" id="testingCanvas">
               </div>
               <div>
                 <img src="./assets/img/ice-cream-example.svg" class="homeScoop">
@@ -240,8 +241,10 @@
 
   <!-- Color picker scripts -->
   <script src="js/jscolor.js"></script>
-  
+
   <!-- Slick scripts -->
   <script src="js/slick.min.js"></script>
+
+  <script type="text/javascript" src="js/domvas.min.js"></script>
 </body>
 </html>
