@@ -354,7 +354,26 @@ $$(document).on('page:afterin', '.page[data-name="scoops"]', function (page) {
   });
 })
 
-
+$$(document).on('page:afterin', '.page[data-name="checkingroup"]', function (page) {
+  $(document).ready(function() {
+    console.log("ran read.js");
+    console.log(page.detail.route.query.time)
+    $("#checkingroupTitle").text(page.detail.route.query.time)
+      var url = "http://iontheory.net/scoop/categories/json.php?user=" + localStorage.getItem("username");
+      console.log("scoops get url: " + url);
+      $.getJSON(url, function(result) {
+          console.log(result);
+          $.each(result, function(i, field) {
+              var id = field.ID;
+              var user = localStorage.getItem('username');
+              var category = field.category;
+              var color = field.color;
+              Parsedcolor = color.replace("#","%23")
+              $("#listcheckins").append("<div style='background-color:" + color + ";''><a href='/checkin-scoop/?user=" + localStorage.getItem("username") + "&category=" + category + "'><img src='./assets/img/social-category-icon.svg'><p>" + category + "</p><img src='./assets/img/arrow-right.svg'></a></div>");
+          });
+      });
+  });
+})
 
 $$(document).on('page:afterin', '.page[data-name="today"]', function (page) {
   $(document).ready(function() {
@@ -459,10 +478,10 @@ $$(document).on('page:afterin', '.page[data-name="login"]', function (page) {
   $(document).ready(function() {
     console.log("running login");
       $("#loginButton").click(function() {
-            var username = $("#username").val();
-            var password = $("#password").val();
+            var username = $("#loginusername").val();
+            var password = $("#loginpassword").val();
             var dataString = "username=" + username + "&password=" + password;
-            console.log('running insert');
+            console.log('running authentication');
             console.log(username);
             console.log(password);
             console.log(dataString);
@@ -516,18 +535,19 @@ $$(document).on('page:afterin', '.page[data-name="home"]', function (page) {
     for (var i = 0; i< arrayLength; i++) {
       var scoopPosition = (i * 40) - 40;
       zSpace = 0 - i;
-      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px;'></div>";
+      var scoop = "<div class='scoop-topping' style='background-color:" + scoops[i] + "; bottom: " + scoopPosition + "px; z-index: " + zSpace + "'></div>";
       $("#scoops-stack").append(scoop);
     }
 })
 
-$$(document).on('page:afterout', '.page[data-name="today"]', function (page) {
+$$(document).on('page:afterout', '.page[data-name="checkingroup"]', function (page) {
   // Do something here for "about" page
   $(document).ready(function() {
           $("#listcheckins").empty();
 
       });
 });
+
 
 $$(document).on('page:afterout', '.page[data-name="scoops"]', function (page) {
   $(document).ready(function() {

@@ -7,12 +7,12 @@ routes = [
     path: '/today/',
     componentUrl: './pages/today.html',
   },
-  {
+/*  {
     path: '/checkins/',
     componentUrl: './pages/checkins.html',
-  },
+  },*/
   {
-    path: '/checkin-scoop/:id/',
+    path: '/checkin-scoop/',
     componentUrl: './pages/checkin-scoop.html',
   },
   {
@@ -30,6 +30,10 @@ routes = [
   {
     path: '/settings/',
     url: './pages/settings.html',
+  },
+  {
+    path: '/checkingroup/',
+    url: './pages/checkingroup.html',
   },
   {
     path: '/login/',
